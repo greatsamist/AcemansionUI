@@ -6,8 +6,8 @@ const Header = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="flex justify-between items-center px-2 pt-4 relative bg-white z-20">
-        <h1 className="text-4xl">AM</h1>
+      <div className="flex justify-between items-center px-2 pt-5 relative bg-white z-20">
+        <h1 className="text-5xl">AM</h1>
 
         {/* Desktop Navigation */}
         <div className=" md:flex hidden gap-12 font-display text-[17px]">
