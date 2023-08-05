@@ -32,7 +32,7 @@ const HomeTeam = () => {
 
       <div className="grid  grid-cols-1  md:grid-cols-2 lg:grid-cols-3 text-center gap-5 md:gap-6 mt-10">
         {MEMBERS.map(({ id, name, image, job }) => (
-          <ImageItem id={id} name={name} image={image} job={job} />
+          <ImageItem key={id} name={name} image={image} job={job} />
         ))}
       </div>
     </div>
@@ -43,7 +43,7 @@ export default HomeTeam;
 
 const ImageItem = ({ id, name, image, job }: ImageItemProps) => {
   return (
-    <div className="relative" id={id}>
+    <div className="relative" key={id}>
       <div className="sm:w-[400px] sm:h-[400px] md:w-[350px] md:h-[350px] lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px] overflow-hidden">
         <img
           className="object-cover h-full w-full transition duration-300 ease-in-out hover:scale-105"
@@ -61,7 +61,8 @@ const ImageItem = ({ id, name, image, job }: ImageItemProps) => {
 };
 
 interface ImageItemProps {
-  id: string;
+  key: string;
+  id?: string;
   name: string;
   job: string;
   image: string;

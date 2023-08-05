@@ -6,6 +6,9 @@ module.exports = {
       display: ["Bebas Neue"],
     },
     extend: {
+      screens: {
+        sm: "576px",
+      },
       colors: {
         "ace-gold": "#A6945B",
         "ace-black": "#2E2E2E",

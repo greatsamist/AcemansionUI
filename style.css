@@ -61,7 +61,7 @@
 
     /* Increase the scale for the visible slides */
     .swiper-slide.swiper-slide-visible.swiper-slide-active {
-      transform: scale(1.2) !important;
+      transform: scale(1.21) !important;
     }
   }
 }

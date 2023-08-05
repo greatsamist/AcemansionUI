@@ -1,7 +1,5 @@
 import play from "../../assets/images/home/play.png";
 import sampleImage from "../../assets/images/home/homeHero.jpg";
-import sampleImage2 from "../../assets/images/home/smpl.png";
-import sampleImage3 from "../../assets/images/home/smpl2.png";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -54,9 +52,7 @@ const HomePortfolio = () => {
           stretch: 100,
           depth: 200,
           modifier: 1,
-
           slideShadows: false, // Disable shadows to make it smoother
-          //  slideShadowsTranslate: "10px", // Control the speed of the effect
         }}
         pagination={{
           el: ".swiper-pagination",
@@ -64,9 +60,9 @@ const HomePortfolio = () => {
         }}
         className="swiper-container"
       >
-        {PORTFOLIOS.map((image) => {
+        {PORTFOLIOS.map((image, idx) => {
           return (
-            <SwiperSlide className="swiper-slide">
+            <SwiperSlide className="swiper-slide" key={idx}>
               <img className="slide-image cursor-pointer" src={image} alt="" />
               <img className="play-button" width="50px" src={play} />
             </SwiperSlide>

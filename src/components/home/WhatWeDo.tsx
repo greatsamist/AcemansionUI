@@ -3,7 +3,7 @@ import eventIcon from "../../assets/images/home/eventImage.png";
 
 const WhatWeDo = () => {
   return (
-    <div className="container mx-auto flex justify-center items-center flex-col my-24 px-4 w-full lg:w-10/12">
+    <div className="container mx-auto flex justify-center items-center flex-col my-24 px-4 w-full lg:w-11/12">
       <h6 className="tracking-[.2em]">ACE MANSION STUDIO</h6>
       <h3 className="text-[40px] lg:text-[80px]">This is What We Do</h3>
       <div></div>

@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 
 const TESTIMONIALS_DATA = [
   {
+    id: "1",
     title: "An Intense Experience",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
     image:
@@ -17,6 +18,7 @@ const TESTIMONIALS_DATA = [
     job: "Music Artist",
   },
   {
+    id: "2",
     title: "An Intense Experience",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
     image:
@@ -25,6 +27,7 @@ const TESTIMONIALS_DATA = [
     job: "Music Artist",
   },
   {
+    id: "3",
     title: "An Intense Experience",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
     image:
@@ -33,6 +36,7 @@ const TESTIMONIALS_DATA = [
     job: "Music Artist",
   },
   {
+    id: "4",
     title: "Visually Over-Powering",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
     image:
@@ -44,7 +48,7 @@ const TESTIMONIALS_DATA = [
 
 const Testimonials = () => {
   return (
-    <div className="container mx-auto px-4 my-36 w-full lg:w-10/12">
+    <div className="container mx-auto px-4 my-36 w-full lg:w-11/12">
       <Swiper
         slidesPerView={1}
         spaceBetween={80}
@@ -62,9 +66,9 @@ const Testimonials = () => {
         }}
         className="swiper-testimonial"
       >
-        {TESTIMONIALS_DATA.map(({ title, text, image, name, job }) => {
+        {TESTIMONIALS_DATA.map(({ id, title, text, image, name, job }) => {
           return (
-            <SwiperSlide className="swiper-slide">
+            <SwiperSlide className="swiper-slide" key={id}>
               <div className="flex flex-col gap-3 border-l border-ace-gold pl-8">
                 <h3 className="text-[35px] tracking-wider leading-none">{`"${title}"`}</h3>
                 <p className="text-gray-400 text-sm leading-7">{`"${text}"`}</p>
