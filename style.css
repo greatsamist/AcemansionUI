@@ -7,11 +7,13 @@
     font-family:
       Open sans,
       sans-serif;
+    color: #2e2e2e;
   }
 
   h1,
   h2,
   h3,
+  h4,
   h5,
   h6 {
     font-family:
@@ -20,13 +22,18 @@
     text-transform: uppercase;
   }
 
+  h3 {
+    color: #2e2e2e;
+  }
+
   h5 {
     font-size: 27px;
   }
 
   h6 {
     font-size: 18px;
-    color: #6d6d6d;
+    color: #a6945b;
+    /* //#6d6d6d; */
   }
   /* 
   .swiper-slide {
@@ -66,9 +73,9 @@
       width: 400px !important;
     } */
     .slide-image {
-      /* height: 300px; */
-      /* max-height: 300px; */
-      /* width: 450px; */
+      /* height: 300px;
+      max-height: 300px;
+      width: 550px; */
     }
     .swiper-slide-prev .slide-image {
       /* min-height: 300px;
@@ -82,13 +89,10 @@
     .swiper-slide-active .slide-image {
       /* display: none; */
       /* background-color: #f0f0f0; */
-      /* width: 550px;
-      min-height: 300px; */
+      /* width: 550px;/ */
+      /* min-height: 300px; */
       /* max-height: 350px; */
-      object-fit: cover;
-      @media screen and (min-width: 768px) {
-        /* width: 400px !important; */
-      }
+      /* object-fit: cover; */
     }
   }
 }
@@ -99,6 +103,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .card-image-effect {
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0)
+    );
   }
 }
 

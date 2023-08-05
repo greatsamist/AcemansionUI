@@ -6,6 +6,11 @@ module.exports = {
       display: ["Bebas Neue"],
     },
     extend: {
+      colors: {
+        "ace-gold": "#A6945B",
+        "ace-black": "#2E2E2E",
+        "ace-darker": "#21292A",
+      },
       keyframes: {
         moveIn: {
           "0%": {

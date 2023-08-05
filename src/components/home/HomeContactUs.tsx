@@ -3,23 +3,42 @@ import {
   AiFillYoutube,
   AiOutlineTwitter,
 } from "react-icons/ai";
+import { FaTiktok } from "react-icons/fa";
 import { FormTextArea } from "../utils/FormTextArea";
 import { FormTextInput } from "../utils/FormTextInput";
 import { Button } from "../utils/Button";
+import { Link } from "react-router-dom";
 
 const HomeContactUs = () => {
   return (
-    <div className="container mx-auto px-4 mt-10 flex items-center justify-center gap-24">
-      <div className="basis-1/2 text-right">
-        <h6 className="tracking-[8px] mb-6">Collaborate</h6>
-        <h3 className="text-[65px] mb-6 tracking-wider leading-none">
-          Want To <span className="block">Work With </span>Us? Leave Us A
+    <div className="container mx-auto px-4 mt-14 flex items-top justify-center gap-28">
+      <div className="basis-1/2 flex flex-col text-right">
+        <h6 className="tracking-[8px] mb-6 text-ace-gold">Collaborate</h6>
+        <h3 className="text-[65px] text-ace-black mb-6 tracking-wider self-end leading-none">
+          Want To Work <span className="block">With Us? Leave Us</span> A
           Message!
         </h3>
         <div className="flex items-center justify-end gap-5">
-          <AiFillInstagram size={22} />
-          <AiFillYoutube size={22} />
-          <AiOutlineTwitter size={22} />
+          <Link
+            to="https://www.instagram.com/acemansion/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiFillInstagram size={22} color="#2E2E2E" />
+          </Link>
+          <Link to="" target="_blank" rel="noopener noreferrer">
+            <AiFillYoutube size={22} color="#2E2E2E" />
+          </Link>
+          <Link to="" target="_blank" rel="noopener noreferrer">
+            <AiOutlineTwitter size={22} color="#2E2E2E" />
+          </Link>
+          <Link
+            to="https://www.tiktok.com/@acemansionstudios"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTiktok size={18} color="#2E2E2E" />
+          </Link>
         </div>
       </div>
 

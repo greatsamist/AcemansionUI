@@ -21,42 +21,49 @@ import "swiper/css/pagination";
 const HomePortfolio = () => {
   const PORTFOLIOS = [
     sampleImage,
-    sampleImage2,
     sampleImage,
-    sampleImage3,
     sampleImage,
-    sampleImage2,
-    sampleImage3,
+    sampleImage,
+    sampleImage,
+    sampleImage,
+    sampleImage,
   ];
 
   return (
     <div className="py-16">
       <Swiper
-        // effect="coverflow"
-        slidesPerView={3}
-        centeredSlides={true}
+        effect="coverflow"
+        slidesPerView={1}
+        // spaceBetween={40}
+        // centeredSlides={true}
         loop={true}
-        modules={[Autoplay, Navigation, Pagination]}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
-        // coverflowEffect={{
-        //   rotate: 0,
-        //   stretch: 0,
-        //   depth: 200,
-        //   modifier: 1,
-        // }}
+        autoHeight={true}
+        modules={[Autoplay, Navigation, EffectCoverflow, Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 3,
+          },
+        }}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+        }}
         pagination={{
           el: ".swiper-pagination",
           clickable: true,
         }}
         className="swiper-container"
       >
-        {PORTFOLIOS.map((i) => {
+        {PORTFOLIOS.map((image) => {
           return (
             <SwiperSlide className="swiper-slide">
-              <img className="slide-image cursor-pointer" src={i} alt="" />
+              <img className="slide-image cursor-pointer" src={image} alt="" />
               <img className="play-button" width="50px" src={play} />
             </SwiperSlide>
           );
