@@ -1,30 +1,38 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ArrowRightDownIcon from "../assets/icons/ArrowRightDownIcon";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="flex justify-between items-center px-2 pt-5 relative bg-white z-20">
-        <h1 className="text-5xl">AM</h1>
+    <div className="bg-ace-black px-10 py-5">
+      <div className="flex justify-between items-center relative text-white z-20">
+        <div className="flex items-center gap-11">
+          <h1 className="text-3xl">
+            Ace<span className="text-ace-gold">Mansion</span>
+          </h1>
 
-        {/* Desktop Navigation */}
-        <div className=" md:flex hidden gap-12 font-display text-[17px]">
-          <Link to="/" className="tracking-widest">
-            Home
-          </Link>
-          <Link to="about" className="tracking-widest">
-            About Us
-          </Link>
-          <Link to="portfolio" className="tracking-widest">
-            Portfolio
-          </Link>
-          <Link to="team" className="tracking-widest">
-            Our Team
-          </Link>
-          <Link to="contact" className="tracking-widest">
+          {/* Desktop Navigation */}
+          <div className=" md:flex hidden gap-12 font-display uppercase text-[17px]">
+            <Link to="/">Home</Link>
+            <Link to="about">About Us</Link>
+            <Link to="portfolio">Portfolio</Link>
+            <Link to="team">Our Team</Link>
+          </div>
+        </div>
+
+        <div>
+          <Link
+            to="contact"
+            className="font-display text-[17px] flex items-center gap-1 uppercase"
+          >
             Contact Us
+            <ArrowRightDownIcon
+              width="30px"
+              height="30px"
+              className="fill-white"
+            />
           </Link>
         </div>
 

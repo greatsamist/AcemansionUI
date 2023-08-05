@@ -1,22 +1,37 @@
-// import heroImage from "../../assets/images/home/homeHero.jpg";
-import heroMedia1 from "../../assets/video/heroMedia1.mp4";
+import heroImage from "../../assets/images/home/homeHero.jpg";
+import goldBg from "../../assets/images/gold-bg.jpg";
+import ArrowRightDownIcon from "../../assets/icons/ArrowRightDownIcon";
 
 const Hero = () => {
   return (
-    <div
-      className="relative container mx-auto px-4 my-5 h-[250px] md:h-[400px] xl:h-[500px] overflow-hidden flex justify-center items-center bg-cover bg-center bg-no-repeat"
-      //   style={{ backgroundImage: `url(${heroImage})` }}
-    >
-      <h1 className="text-center text-6xl md:text-8xl text-white tracking-[-5.5px] z-10">
-        ACE MANSION STUDIO
-      </h1>
+    <div className=" ">
+      <div className="grid grid-cols-1 sm:grid-cols-5 h-[250px] md:h-[400px] xl:h-[500px]">
+        <div
+          className="bg-cover col-span-3 bg-center bg-no-repeat border-r-2"
+          style={{ backgroundImage: `url(${goldBg})` }}
+        >
+          <h2 className=" text-5xl xl:text-6xl text-ace-black p-10">
+            Transform Your Ideas Into Stunning Visual Stories
+          </h2>
+        </div>
 
-      <div className="absolute top-0 right-0 left-0 w-full mx-6">
-        <div className="absolute top-0 right-0 left-0 px-4 bg-gray-600 w-full h-screen opacity-40"></div>
-        <video autoPlay loop muted>
-          <source src={heroMedia1} type="video/mp4" />
-        </video>
+        <div
+          className="col-span-2 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
+          {" "}
+          <h2 className=" text-5xl xl:text-6xl text-white p-5 pr-10 text-right mt-[200px]">
+            With Our Creative Video Production
+          </h2>
+        </div>
       </div>
+
+      <div className="border-b-2 border-ace-black p-5 pr-10 flex items-center justify-end gap-1">
+        <h5 className="text-right">Get Started</h5>
+        <ArrowRightDownIcon className="fill-ace-black" />
+      </div>
+
+      <div></div>
     </div>
   );
 };

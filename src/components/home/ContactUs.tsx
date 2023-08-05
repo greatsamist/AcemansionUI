@@ -9,7 +9,7 @@ import { FormTextInput } from "../utils/FormTextInput";
 import { Button } from "../utils/Button";
 import { Link } from "react-router-dom";
 
-const HomeContactUs = () => {
+const ContactUs = () => {
   return (
     <div className="container mx-auto px-4 mt-14 flex flex-col lg:flex-row items-top justify-center gap-12 lg:gap-28 w-full lg:w-11/12">
       <div className="basis-1/2 flex flex-col text-right">
@@ -56,4 +56,4 @@ const HomeContactUs = () => {
   );
 };
 
-export default HomeContactUs;
+export default ContactUs;

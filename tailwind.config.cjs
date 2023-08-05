@@ -3,15 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,html}"],
   theme: {
     fontFamily: {
-      display: ["Bebas Neue"],
+      display: ["Feature mono medium", "monospace"],
     },
     extend: {
       screens: {
         sm: "576px",
       },
       colors: {
-        "ace-gold": "#A6945B",
-        "ace-black": "#2E2E2E",
+        "ace-gold": "#DEAA4C",
+        "ace-black": "#272A34",
         "ace-darker": "#21292A",
       },
       keyframes: {

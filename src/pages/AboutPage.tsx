@@ -1,7 +1,13 @@
-import React from "react";
+import ContactUs from "../components/home/ContactUs";
+import Testimonials from "../components/home/Testimonials";
 
 const AboutPage = () => {
-  return <div>AboutPage</div>;
+  return (
+    <>
+      <Testimonials />
+      <ContactUs />
+    </>
+  );
 };
 
 export default AboutPage;

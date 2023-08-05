@@ -1,15 +1,18 @@
 import Hero from "../components/home/Hero";
-import HomeContactUs from "../components/home/HomeContactUs";
+import HomeContactUs from "../components/home/ContactUs";
 import HomePortfolio from "../components/home/HomePortfolio";
 import HomeTeam from "../components/home/HomeTeam";
 import Testimonials from "../components/home/Testimonials";
-import WhatWeDo from "../components/home/WhatWeDo";
+
+import HomeAbout from "../components/home/HomeAbout";
+import HomeServices from "../components/home/HomeServices";
 
 const Homepage = () => {
   return (
     <>
       <Hero />
-      <WhatWeDo />
+      <HomeAbout />
+      <HomeServices />
       <HomePortfolio />
       <HomeTeam />
       <Testimonials />
