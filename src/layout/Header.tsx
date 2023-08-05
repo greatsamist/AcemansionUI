@@ -5,7 +5,7 @@ const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-4">
       <div className="flex justify-between items-center px-2 pt-5 relative bg-white z-20">
         <h1 className="text-5xl">AM</h1>
 

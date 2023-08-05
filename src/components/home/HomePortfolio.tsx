@@ -33,26 +33,30 @@ const HomePortfolio = () => {
     <div className="py-16">
       <Swiper
         effect="coverflow"
+        initialSlide={1}
         slidesPerView={1}
-        // spaceBetween={40}
-        // centeredSlides={true}
+        centeredSlides={true}
         loop={true}
         autoHeight={true}
         modules={[Autoplay, Navigation, EffectCoverflow, Pagination]}
+        speed={1000}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
         breakpoints={{
-          640: {
-            slidesPerView: 3,
+          850: {
+            slidesPerView: 2,
           },
         }}
         coverflowEffect={{
           rotate: 0,
-          stretch: 0,
+          stretch: 100,
           depth: 200,
           modifier: 1,
+
+          slideShadows: false, // Disable shadows to make it smoother
+          //  slideShadowsTranslate: "10px", // Control the speed of the effect
         }}
         pagination={{
           el: ".swiper-pagination",

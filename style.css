@@ -22,10 +22,6 @@
     text-transform: uppercase;
   }
 
-  h3 {
-    color: #2e2e2e;
-  }
-
   h5 {
     font-size: 27px;
   }
@@ -33,20 +29,7 @@
   h6 {
     font-size: 18px;
     color: #a6945b;
-    /* //#6d6d6d; */
   }
-  /* 
-  .swiper-slide {
-    width: 55rem;
-    height: 20rem;
-    position: relative;
-  } */
-
-  /* .swiper-slide .slide-image {
-    width: 60rem;
-    height: 18rem;
-    object-fit: cover;
-  } */
 
   .swiper-slide-shadow-left,
   .swiper-slide-shadow-right {
@@ -54,45 +37,31 @@
   }
 
   .swiper-container {
-    background-color: aliceblue;
-    /* height: 300px; */
-    .swiper-wrapper {
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -moz-box-align: center;
-      -ms-flex-align: center;
+    .swiper-slide {
+      opacity: 0;
+    }
+    .swiper-slide-prev,
+    .swiper-slide-active,
+    .swiper-slide-next {
+      opacity: 1;
+    }
+
+    /* Styles for the individual slides */
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
       align-items: center;
+      transition: transform 1s ease-in-out !important; /* Add a scale transition effect on hover */
     }
-    /* .swiper-slide:not(.swiper-slide-visible) {
-      display: none;
-    } */
-    /* .swiper-slide-visible.swiper-slide-prev {
-      width: 270px !important;
-    } */
-    /* .swiper-slide-visible.swiper-slide-active {
-      width: 400px !important;
-    } */
-    .slide-image {
-      /* height: 300px;
-      max-height: 300px;
-      width: 550px; */
+
+    .swiper-slide.swiper-slide-visible.swiper-slide-prev,
+    .swiper-slide.swiper-slide-visible.swiper-slide-next {
+      transform: scale(0.8) !important;
     }
-    .swiper-slide-prev .slide-image {
-      /* min-height: 300px;
-      max-height: 300px; */
-      /* width: 400px; */
-    }
-    .swiper-slide-next .slide-image {
-      /* min-height: 300px;
-      width: 400px; */
-    }
-    .swiper-slide-active .slide-image {
-      /* display: none; */
-      /* background-color: #f0f0f0; */
-      /* width: 550px;/ */
-      /* min-height: 300px; */
-      /* max-height: 350px; */
-      /* object-fit: cover; */
+
+    /* Increase the scale for the visible slides */
+    .swiper-slide.swiper-slide-visible.swiper-slide-active {
+      transform: scale(1.2) !important;
     }
   }
 }
@@ -103,6 +72,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
+    cursor: pointer;
   }
 
   .card-image-effect {

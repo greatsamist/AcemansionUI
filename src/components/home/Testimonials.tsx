@@ -44,7 +44,7 @@ const TESTIMONIALS_DATA = [
 
 const Testimonials = () => {
   return (
-    <div className="container mx-auto px-4 my-36">
+    <div className="container mx-auto px-4 my-36 w-full lg:w-10/12">
       <Swiper
         slidesPerView={1}
         spaceBetween={80}

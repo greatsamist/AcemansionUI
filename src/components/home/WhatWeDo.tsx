@@ -3,12 +3,12 @@ import eventIcon from "../../assets/images/home/eventImage.png";
 
 const WhatWeDo = () => {
   return (
-    <div className="container mx-auto flex justify-center items-center flex-col my-24 px-4">
+    <div className="container mx-auto flex justify-center items-center flex-col my-24 px-4 w-full lg:w-10/12">
       <h6 className="tracking-[.2em]">ACE MANSION STUDIO</h6>
       <h3 className="text-[40px] lg:text-[80px]">This is What We Do</h3>
       <div></div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mt-14">
         <WhatWeDoItems
           title="Event Videography"
           text="Our event videography services cover a wide range of occasions, including weddings, corporate events, conferences, trade shows, and more. Let us capture the essence of your event and create a timeless keepsake that you'll cherish forever."

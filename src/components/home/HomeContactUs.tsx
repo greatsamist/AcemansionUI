@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const HomeContactUs = () => {
   return (
-    <div className="container mx-auto px-4 mt-14 flex items-top justify-center gap-28">
+    <div className="container mx-auto px-4 mt-14 flex items-top justify-center gap-28 w-full lg:w-10/12">
       <div className="basis-1/2 flex flex-col text-right">
         <h6 className="tracking-[8px] mb-6 text-ace-gold">Collaborate</h6>
         <h3 className="text-[65px] text-ace-black mb-6 tracking-wider self-end leading-none">
