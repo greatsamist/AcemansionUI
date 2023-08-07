@@ -1,11 +1,7 @@
-import ContactUs from "../components/home/ContactUs";
+import HomeContactUs from "../components/home/HomeContactUs";
 
 const ContactUsPage = () => {
-  return (
-    <>
-      <ContactUs />
-    </>
-  );
+  return <HomeContactUs />;
 };
 
 export default ContactUsPage;

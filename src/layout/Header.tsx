@@ -6,7 +6,7 @@ const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <div className="bg-ace-black px-10 py-5">
+    <header className="bg-ace-black px-10 py-5">
       <div className="flex justify-between items-center relative text-white z-20">
         <div className="flex items-center gap-11">
           <h1 className="text-3xl">
@@ -60,7 +60,7 @@ const Header = () => {
         <NavItem label="Our Team" />
         <NavItem label="Contact Us" />
       </div>
-    </div>
+    </header>
   );
 };
 

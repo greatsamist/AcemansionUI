@@ -1,16 +1,16 @@
-import heroImage from "../../assets/images/home/homeHero.jpg";
+import heroImage from "../../assets/images/home/hero-1.jpg";
 import goldBg from "../../assets/images/gold-bg.jpg";
-import ArrowRightDownIcon from "../../assets/icons/ArrowRightDownIcon";
+import { ArrowDownRight } from "lucide-react";
 
 const Hero = () => {
   return (
     <div className=" ">
-      <div className="grid grid-cols-1 sm:grid-cols-5 h-[250px] md:h-[400px] xl:h-[500px]">
+      <div className="grid grid-cols-1 md:grid-cols-5 h-[490px] md:h-[450px] xl:h-[550px]">
         <div
-          className="bg-cover col-span-3 bg-center bg-no-repeat border-r-2"
+          className="bg-cover col-span-3 bg-center bg-no-repeat border-b-2 md:border-r-2"
           style={{ backgroundImage: `url(${goldBg})` }}
         >
-          <h2 className=" text-5xl xl:text-6xl text-ace-black p-10">
+          <h2 className="text-3xl lg:text-5xl xl:text-6xl text-ace-black p-10">
             Transform Your Ideas Into Stunning Visual Stories
           </h2>
         </div>
@@ -20,18 +20,16 @@ const Hero = () => {
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           {" "}
-          <h2 className=" text-5xl xl:text-6xl text-white p-5 pr-10 text-right mt-[200px]">
+          <h2 className="text-3xl lg:text-5xl xl:text-6xl text-white p-5 pr-10 text-right mt-[120px] lg:mt-[200px]">
             With Our Creative Video Production
           </h2>
         </div>
       </div>
 
-      <div className="border-b-2 border-ace-black p-5 pr-10 flex items-center justify-end gap-1">
-        <h5 className="text-right">Get Started</h5>
-        <ArrowRightDownIcon className="fill-ace-black" />
+      <div className="border-b-2 border-ace-black p-4 pr-10 flex items-center justify-end gap-1">
+        <h5 className="text-right text-[22px]">Get Started</h5>
+        <ArrowDownRight size={30} />
       </div>
-
-      <div></div>
     </div>
   );
 };

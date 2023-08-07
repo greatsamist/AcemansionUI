@@ -1,26 +1,26 @@
 import PageTitle from "../utils/PageTitle";
-import heroImage from "../../assets/images/home/homeHero.jpg";
+import aboutImage from "../../assets/images/home/hero-2.jpg";
 import goldBg from "../../assets/images/gold-bg.jpg";
 import ArrowRightDownIcon from "../../assets/icons/ArrowRightDownIcon";
 
 const HomeAbout = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-4">
       <PageTitle title="About Ace Mansion Studio" />
-
-      <div className="grid grid-cols-8 grid-rows-2 gap-x-4 mb-5">
-        <div className="col-span-4 row-span-2">
-          <img className="object-cover w-full h-full" src={heroImage} />
+      <div className="grid grid-cols-1 lg:grid-cols-8 grid-rows-1 lg:grid-rows-2 gap-y-4 lg:gap-y-0 lg:gap-x-4 mb-5">
+        <div className="col-span-1 lg:col-span-4 row-span-1 lg:row-span-2">
+          <img className="object-cover w-full h-full" src={aboutImage} />
         </div>
-        <div className="col-span-2 row-span-1"></div>
-        <div className="col-span-2 row-span-1 border-2 p-6 border-ace-black">
+
+        <div className="hidden lg:block lg:col-span-2 row-span-1"></div>
+        <div className="lg:col-span-2 lg:row-span-1 border-2 p-8 border-ace-black">
           <h5>1,200%</h5>
           <p className="mt-2 text-sm">
             By such a percentage our video increase the sales of our customers
           </p>
         </div>
 
-        <div className="col-span-4 row-span-2 border-2 p-6 border-ace-black">
+        <div className="col-span-1 lg:col-span-4 row-span-2 border-2 p-6 border-ace-black">
           <h5>4 Years</h5>
           <p className="mt-2 text-sm">
             Our video production team as been in operation, and we have a team
@@ -30,10 +30,10 @@ const HomeAbout = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-10 gap-4">
-        <div className="col-span-4 border-2 p-6 border-ace-black">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-10 gap-4">
+        <div className="col-span-1 lg:col-span-4 border-2 p-8 border-ace-black">
           <h5 className="leading-none">
-            {`>`}685 <span className="block">Projects</span>
+            {`>`}485 <span className="block">Projects</span>
           </h5>
           <p className="mt-2 text-sm">
             We specialize in a variety of video types, including corporate
@@ -42,13 +42,13 @@ const HomeAbout = () => {
           </p>
         </div>
 
-        <div className="bg-ace-black col-span-3 flex items-center justify-center">
+        <div className="min-h-[200px] bg-ace-black col-span-1 lg:col-span-3 flex items-center justify-center">
           <h5 className="text-ace-gold ">Meet Our Team</h5>
           <ArrowRightDownIcon className="fill-ace-gold" />
         </div>
 
         <div
-          className="bg-cover bg-center bg-no-repeat border-r-2 col-span-3"
+          className="min-h-[200px]  bg-cover bg-center bg-no-repeat border-r-2 col-span-1 lg:col-span-3"
           style={{ backgroundImage: `url(${goldBg})` }}
         ></div>
       </div>

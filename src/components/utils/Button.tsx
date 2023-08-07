@@ -1,28 +1,25 @@
 import { ButtonHTMLAttributes, forwardRef } from "react";
 import { cn } from "../../lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
-import { Loader2 } from "lucide-react";
+import { ArrowDownRight, Loader2 } from "lucide-react";
 
 const buttonVariants = cva(
-  "active:scale-95 inline-flex items-center tracking-[3px] font-display justify-center text-[18px] transition-colors hover:bg-transparent focus:outline-none  disabled:opacity-50  disabled:pointer-events-none",
+  "inline-flex items-center uppercase font-display justify-end text-xl transition-colors hover:bg-transparent  disabled:opacity-50  disabled:pointer-events-none",
   {
     variants: {
       variant: {
         default:
-          "bg-ace-gold text-white hover:bg-transparent hover:text-ace-black hover:outline hover:outline-1 hover:outline-ace-gold focus:outline focus:outline-1 focus:outline-ace-gold",
+          "bg-ace-gold text-ace-black border-b border-t-2 border-ace-black hover:bg-transparent hover:text-ace-black hover:outline-b hover:outline-t-2 hover:outline-ace-black focus:outline focus:outline-1 focus:outline-ace-gold",
         destructive: "text-white hover:bg-red-600 dark:hover:bg-red-600",
         outline:
-          "bg-transparent text-ace-gold hover:text-white hover:bg-ace-black outline outline-1 outline-black",
-        subtle: "hover:bg-zinc-200 bg-white text-black",
-        ghost:
-          "bg-transparent hover:bg-white text-zinc-800 data-[state=open]:bg-transparent data-[state=open]:bg-transparent",
-        link: "bg-transparent dark:bg-transparent underline-offset-4 hover:underline text-slate-900 dark:text-slate-100 hover:bg-transparent dark:hover:bg-transparent",
+          "bg-transparent text-ace-black border-y hover:bg-ace-gold outline outline-2 outline-ace-black",
+        link: "bg-transparent text-ace-black hover:bg-ace-gold outline outline-2 outline-ace-black",
       },
       size: {
-        default: "h-12 py-2 px-8",
+        default: "h-14 py-2",
         sm: "h-9 px-2",
         xs: "h-8 px-1.5",
-        lg: "w-full h-12 px-8 ",
+        lg: "w-full h-14",
       },
     },
     defaultVariants: {
@@ -49,6 +46,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
         {children}
+        <span className="ml-1">
+          <ArrowDownRight size={30} />
+        </span>
       </button>
     );
   }

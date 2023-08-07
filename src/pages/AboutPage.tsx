@@ -1,11 +1,9 @@
-import ContactUs from "../components/home/ContactUs";
-import Testimonials from "../components/home/Testimonials";
+import HomeContactUs from "../components/home/HomeContactUs";
 
 const AboutPage = () => {
   return (
     <>
-      <Testimonials />
-      <ContactUs />
+      <HomeContactUs />
     </>
   );
 };

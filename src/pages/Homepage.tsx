@@ -1,11 +1,11 @@
 import Hero from "../components/home/Hero";
-import HomeContactUs from "../components/home/ContactUs";
-import HomePortfolio from "../components/home/HomePortfolio";
-import HomeTeam from "../components/home/HomeTeam";
-import Testimonials from "../components/home/Testimonials";
-
 import HomeAbout from "../components/home/HomeAbout";
 import HomeServices from "../components/home/HomeServices";
+import Process from "../components/home/Process";
+import HomeCases from "../components/home/HomeCases";
+import HomeReview from "../components/home/HomeReview";
+import HomeFaqs from "../components/home/HomeFaqs";
+import HomeContactUs from "../components/home/HomeContactUs";
 
 const Homepage = () => {
   return (
@@ -13,9 +13,10 @@ const Homepage = () => {
       <Hero />
       <HomeAbout />
       <HomeServices />
-      <HomePortfolio />
-      <HomeTeam />
-      <Testimonials />
+      <Process />
+      <HomeCases />
+      <HomeReview />
+      <HomeFaqs />
       <HomeContactUs />
     </>
   );
