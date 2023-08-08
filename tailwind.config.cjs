@@ -11,6 +11,7 @@ module.exports = {
       },
       gridRow: {
         "span-17": "span 17 / span 17",
+        "span-7": "span 7 / span 7",
         "span-8": "span 8 / span 8",
       },
       screens: {

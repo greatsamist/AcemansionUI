@@ -30,7 +30,7 @@ const HomeServices = () => {
         subtitle="We offer a range of services to meet your video production needs"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-16">
         {SERVICES.map(({ id, image, title }) => (
           <HomeServicesItem key={id} image={image} title={title} />
         ))}
