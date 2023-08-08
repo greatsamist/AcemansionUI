@@ -1,4 +1,4 @@
-import ArrowRightDownIcon from "../../assets/icons/ArrowRightDownIcon";
+import { ArrowDownRight } from "lucide-react";
 import casesImage from "../../assets/images/home/cases-1.jpg";
 
 const HomeCases = () => {
@@ -41,7 +41,7 @@ const HomeCases = () => {
       <div className="border-b-2 border-ace-black py-5 px-4">
         <div className="container mx-auto flex items-center justify-end gap-1">
           <h5 className="text-right">See More Cases</h5>
-          <ArrowRightDownIcon className="fill-ace-black" />
+          <ArrowDownRight size={30} />
         </div>
       </div>
     </>

@@ -1,7 +1,8 @@
 import PageTitle from "../utils/PageTitle";
 import aboutImage from "../../assets/images/home/hero-2.jpg";
 import goldBg from "../../assets/images/gold-bg.jpg";
-import ArrowRightDownIcon from "../../assets/icons/ArrowRightDownIcon";
+import { ArrowDownRight } from "lucide-react";
+import { COLORS } from "../../lib/utils";
 
 const HomeAbout = () => {
   return (
@@ -44,7 +45,7 @@ const HomeAbout = () => {
 
         <div className="min-h-[200px] bg-ace-black col-span-1 lg:col-span-3 flex items-center justify-center">
           <h5 className="text-ace-gold ">Meet Our Team</h5>
-          <ArrowRightDownIcon className="fill-ace-gold" />
+          <ArrowDownRight size={35} color={COLORS.aceGold} />
         </div>
 
         <div

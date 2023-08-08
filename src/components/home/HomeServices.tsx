@@ -2,7 +2,7 @@ import PageTitle from "../utils/PageTitle";
 import services4 from "../../assets/images/home/services-4.jpg";
 import services2 from "../../assets/images/home/services-2.jpg";
 import services3 from "../../assets/images/home/services-3.jpg";
-import ArrowRightDownIcon from "../../assets/icons/ArrowRightDownIcon";
+import { ArrowDownRight } from "lucide-react";
 
 const SERVICES = [
   {
@@ -51,7 +51,7 @@ const HomeServicesItem = ({ id, title, image }: HomeServicesItemProps) => {
       </div>
       <div className="flex items-center justify-center py-4 gap-1">
         <h4 className="text-2xl">{title}</h4>
-        <ArrowRightDownIcon />
+        <ArrowDownRight size={30} />
       </div>
     </div>
   );

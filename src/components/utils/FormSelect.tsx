@@ -1,14 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import { FC, useRef, useState } from "react";
 
-import { ArrowDown } from "lucide-react";
+import { ArrowDownRight } from "lucide-react";
 import SelectOptions from "./SelectOptions";
 import FormLabel from "./FormLabel";
 import useClickOutside from "../../hooks/useClickOutside";
 
 interface Option {
   [key: string]: any;
-  //   title: string;
-  //   value: string;
 }
 
 interface FormSelectProps {
@@ -27,9 +25,10 @@ interface FormSelectProps {
   disabled?: boolean;
   optionsHeight?: number;
   optionsWidth?: string;
+  emptyOptionsMessage?: string;
 }
 
-const FormSelect: React.FC<FormSelectProps> = ({
+const FormSelect: FC<FormSelectProps> = ({
   labelName,
   placeholder,
   value,
@@ -43,6 +42,7 @@ const FormSelect: React.FC<FormSelectProps> = ({
   disabled,
   optionsHeight = 200,
   optionsWidth = "inherit",
+  emptyOptionsMessage = "No options available",
 }) => {
   const [isShowingOptions, setIsShowingOptions] = useState(false);
   const optionsRef = useRef<HTMLDivElement>(null);
@@ -56,33 +56,6 @@ const FormSelect: React.FC<FormSelectProps> = ({
     setIsShowingOptions(false);
   };
 
-  useEffect(() => {
-    let searchWord = "";
-    const showFoundOptions = (event: KeyboardEvent) => {
-      if (!/\b[a-zA-Z1-9]\b/g.test(event.key)) return;
-      searchWord += event.key.toUpperCase();
-      const currentOptions =
-        selectRef.current?.querySelectorAll<HTMLDivElement>(
-          "div:last-of-type > div > div"
-        );
-      const firstElement = [...currentOptions!].find(
-        (element) =>
-          element.innerText.slice(0, searchWord.length).toUpperCase() ===
-          searchWord
-      );
-
-      if (firstElement) {
-        firstElement.focus();
-        return;
-      }
-      searchWord = "";
-    };
-    if (selectRef.current && isShowingOptions) {
-      window.addEventListener("keydown", showFoundOptions);
-    }
-    return () => window.removeEventListener("keydown", showFoundOptions);
-  }, [isShowingOptions]);
-
   const getFormattedSelectedOptionTitle = (option: Option | null) => {
     const title = customOptionTitle
       ? customOptionTitle(option!)
@@ -94,7 +67,7 @@ const FormSelect: React.FC<FormSelectProps> = ({
   };
 
   return (
-    <div className="relative ">
+    <div className="relative mb-5">
       <FormLabel labelName={labelName} />
       <div
         ref={selectRef}
@@ -105,17 +78,19 @@ const FormSelect: React.FC<FormSelectProps> = ({
         }}
       >
         <div
-          className={`h-[10px]  border-b-2 border-ace-black bg-transparent font-display text-lg  px-[20px] flex items-center justify-between cursor-pointer ${
-            isShowingOptions ? "rounded-t-[5px]" : "rounded-[5px]"
-          }`}
+          className={`h-10 border-b-2 border-ace-black bg-transparent font-display text-lg flex items-center justify-between cursor-pointer`}
           onMouseDown={() => handleSelectTriggerClick()}
         >
           {getFormattedSelectedOptionTitle(value) ? (
-            <span className="">{getFormattedSelectedOptionTitle(value)}</span>
+            <span className="text-lg text-display uppercase">
+              {getFormattedSelectedOptionTitle(value)}
+            </span>
           ) : (
-            <span className="text-[14px] text-tc-lightGrey">{placeholder}</span>
+            <span className="text-lg text-display uppercase text-muted-foreground">
+              {placeholder}
+            </span>
           )}
-          <ArrowDown size={55} className="fill-ace-black" />
+          <ArrowDownRight size={30} />
         </div>
 
         <SelectOptions
@@ -129,6 +104,7 @@ const FormSelect: React.FC<FormSelectProps> = ({
           optionsHeight={optionsHeight}
           optionsWidth={optionsWidth}
           isShowingOptions={isShowingOptions}
+          emptyOptionsMessage={emptyOptionsMessage}
         />
       </div>
     </div>

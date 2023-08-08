@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import ArrowRightDownIcon from "../assets/icons/ArrowRightDownIcon";
+import { ArrowDownRight } from "lucide-react";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -28,11 +28,7 @@ const Header = () => {
             className="font-display text-[17px] flex items-center gap-1 uppercase"
           >
             Contact Us
-            <ArrowRightDownIcon
-              width="30px"
-              height="30px"
-              className="fill-white"
-            />
+            <ArrowDownRight color="white" />
           </Link>
         </div>
 

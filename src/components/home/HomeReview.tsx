@@ -88,7 +88,6 @@ const HomeReview = () => {
       <Swiper
         slidesPerView={"auto"}
         modules={[Autoplay, Navigation, Pagination]}
-        // loop={true}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,
