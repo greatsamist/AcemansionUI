@@ -6,10 +6,14 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const selectOptionFocusHandle = (
-  event: React.KeyboardEvent<HTMLDivElement>
+  event: React.KeyboardEvent<HTMLDivElement>,
+  optionClickCallback: () => void,
+  triggerClickCallback: () => void
 ): void => {
   if (event.key !== "Tab") {
     event.preventDefault();
+    optionClickCallback();
+    triggerClickCallback();
   }
 };
 

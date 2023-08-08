@@ -76,9 +76,7 @@ const Process = () => {
           style={{ backgroundImage: `url(${goldBg})` }}
         >
           <h5>Review</h5>
-          <p className="w-full xl:w-4/5 ">
-            We will edit your footage to create a polished final product
-          </p>
+          <p>We will edit your footage to create a polished final product</p>
         </div>
         <div className="col-span-1 flex flex-col items-center justify-start">
           <div className="bg-ace-black h-2/4 w-1"></div>

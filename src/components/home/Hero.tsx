@@ -5,22 +5,21 @@ import { ArrowDownRight } from "lucide-react";
 const Hero = () => {
   return (
     <div className=" ">
-      <div className="grid grid-cols-1 md:grid-cols-5 h-[490px] md:h-[450px] xl:h-[550px]">
+      <div className="grid grid-cols-1 md:grid-cols-5 h-[550px] md:h-[450px] xl:h-[550px]">
         <div
           className="bg-cover col-span-3 bg-center bg-no-repeat border-b-2 md:border-r-2"
           style={{ backgroundImage: `url(${goldBg})` }}
         >
-          <h2 className="text-3xl lg:text-5xl xl:text-6xl text-ace-black p-10">
+          <h2 className="text-4xl sm:text-5xl md:text-[45px] xl:text-[52.6px] 2xl:text-[63px] text-ace-black pl-8 pr-4 xl:pl-14 pt-14">
             Transform Your Ideas Into Stunning Visual Stories
           </h2>
         </div>
 
         <div
-          className="col-span-2 bg-cover bg-center bg-no-repeat"
+          className="col-span-2 bg-cover bg-center bg-no-repeat flex items-end xl:pb-14 justify-end"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          {" "}
-          <h2 className="text-3xl lg:text-5xl xl:text-6xl text-white p-5 pr-10 text-right mt-[120px] lg:mt-[200px]">
+          <h2 className="text-4xl sm:text-5xl md:text-[45px] xl:text-[52.6px] 2xl:text-[63px] text-white p-5 pr-8 xl:pr-14 text-right">
             With Our Creative Video Production
           </h2>
         </div>

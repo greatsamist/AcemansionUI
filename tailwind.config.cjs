@@ -6,6 +6,13 @@ module.exports = {
       display: ["Feature mono medium", "monospace"],
     },
     extend: {
+      gridTemplateRows: {
+        17: "repeat(17, minmax(0, 1fr))",
+      },
+      gridRow: {
+        "span-17": "span 17 / span 17",
+        "span-8": "span 8 / span 8",
+      },
       screens: {
         sm: "576px",
       },

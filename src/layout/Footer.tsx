@@ -17,26 +17,26 @@ const Footer = () => {
         <div className="lg:basis-7/12 xl:basis-6/12 flex flex-col md:flex-row items-center lg:items-start justify-between gap-10 lg:gap-5 ">
           <div className="flex flex-col gap-2 items-center md:items-start">
             <Link to="/">
-              <h6 className="text-white ">Home</h6>
+              <h6>Home</h6>
             </Link>
             <Link to="/about">
-              <h6 className="text-white">About Us</h6>
+              <h6>About Us</h6>
             </Link>
-            <h6 className="text-white">Portfolio</h6>
-            <h6 className="text-white">Our Team</h6>
-            <h6 className="text-white">Contact Us</h6>
+            <h6>Portfolio</h6>
+            <h6>Our Team</h6>
+            <h6>Contact Us</h6>
           </div>
 
           <div className="flex flex-col gap-2 items-center md:items-start">
             <Link to="/">
-              <h6 className="text-white">Promotional Video</h6>
+              <h6>Promotional Video</h6>
             </Link>
             <Link to="/about">
-              <h6 className="text-white">Event Coverage</h6>
+              <h6>Event Coverage</h6>
             </Link>
-            <h6 className="text-white">Music Video</h6>
-            <h6 className="text-white">Live Streaming</h6>
-            <h6 className="text-white">Wedding Film</h6>
+            <h6>Music Video</h6>
+            <h6>Live Streaming</h6>
+            <h6>Wedding Film</h6>
           </div>
           <div className="flex flex-col gap-2 items-center md:items-start">
             <Link
@@ -45,7 +45,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h6 className="text-white">Whatsapp</h6>
+              <h6>Whatsapp</h6>
               <AiOutlineWhatsApp size={22} color={COLORS.aceGold} />
             </Link>
             <Link
@@ -54,7 +54,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h6 className="text-white">Instagram</h6>
+              <h6>Instagram</h6>
               <AiFillInstagram size={22} color={COLORS.aceGold} />
             </Link>
             <Link
@@ -63,7 +63,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h6 className="text-white">Youtube</h6>
+              <h6>Youtube</h6>
               <AiFillYoutube size={22} color={COLORS.aceGold} />
             </Link>
             <Link
@@ -72,7 +72,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h6 className="text-white">TikTok</h6>
+              <h6>TikTok</h6>
               <FaTiktok size={15} color={COLORS.aceGold} />
             </Link>
           </div>

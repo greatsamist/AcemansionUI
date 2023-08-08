@@ -8,20 +8,21 @@ const HomeAbout = () => {
   return (
     <div className="container mx-auto px-4">
       <PageTitle title="About Ace Mansion Studio" />
-      <div className="grid grid-cols-1 lg:grid-cols-8 grid-rows-1 lg:grid-rows-2 gap-y-4 lg:gap-y-0 lg:gap-x-4 mb-5">
-        <div className="col-span-1 lg:col-span-4 row-span-1 lg:row-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-8 grid-rows-1 lg:grid-rows-17 gap-y-4 lg:gap-y-0 lg:gap-x-4 mb-5">
+        <div className="col-span-1 lg:col-span-4 row-span-1 lg:row-span-17">
           <img className="object-cover w-full h-full" src={aboutImage} />
         </div>
 
-        <div className="hidden lg:block lg:col-span-2 row-span-1"></div>
-        <div className="lg:col-span-2 lg:row-span-1 border-2 p-8 border-ace-black">
+        <div className="hidden lg:block lg:col-span-2 row-span-1 lg:row-span-8"></div>
+        <div className="lg:col-span-2 lg:row-span-8 border-2 p-8 border-ace-black">
           <h5>1,200%</h5>
           <p className="mt-2 text-sm">
             By such a percentage our video increase the sales of our customers
           </p>
         </div>
 
-        <div className="col-span-1 lg:col-span-4 row-span-2 border-2 p-6 border-ace-black">
+        <div></div>
+        <div className="col-span-1 lg:col-span-4 row-span-2 lg:row-span-8 border-2 p-6 border-ace-black">
           <h5>4 Years</h5>
           <p className="mt-2 text-sm">
             Our video production team as been in operation, and we have a team

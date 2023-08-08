@@ -41,7 +41,7 @@ const SelectOptions = forwardRef<HTMLDivElement, SelectOptionsProps>(
           width: optionsWidth,
           display: isShowingOptions ? "block" : "none",
         }}
-        className="absolute overflow-auto shadow-lg bg-white border-b-2 border-ace-black z-50"
+        className="absolute overflow-auto shadow-lg bg-white border-b-2 b z-50"
       >
         {options && options.length > 0 && (
           <div

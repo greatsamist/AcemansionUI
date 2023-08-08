@@ -37,8 +37,8 @@
   }
 
   h6 {
-    font-size: 18px;
-    color: #a6945b;
+    font-size: 16px;
+    color: #fff;
   }
 
   .swiper-slide-shadow-left,
@@ -108,7 +108,7 @@
   position: absolute;
   height: 2px;
   width: 100%;
-  background-color: #000;
+  background-color: #deaa4c;
   transition: transform 0.3s ease;
 }
 
