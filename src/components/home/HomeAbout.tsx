@@ -3,6 +3,7 @@ import aboutImage from "../../assets/images/home/hero-2.jpg";
 import goldBg from "../../assets/images/gold-bg.jpg";
 import { ArrowDownRight } from "lucide-react";
 import { COLORS } from "../../lib/utils";
+import { Link } from "react-router-dom";
 
 const HomeAbout = () => {
   return (
@@ -44,10 +45,13 @@ const HomeAbout = () => {
           </p>
         </div>
 
-        <div className="min-h-[200px] bg-ace-black col-span-1 lg:col-span-3 flex items-center justify-center">
+        <Link
+          to="team"
+          className="min-h-[200px] bg-ace-black col-span-1 lg:col-span-3 flex items-center justify-center"
+        >
           <h5 className="text-ace-gold ">Meet Our Team</h5>
           <ArrowDownRight size={35} color={COLORS.aceGold} />
-        </div>
+        </Link>
 
         <div
           className="min-h-[200px]  bg-cover bg-center bg-no-repeat border-r-2 col-span-1 lg:col-span-3"

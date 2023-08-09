@@ -9,10 +9,11 @@ const Header = () => {
     <header className="bg-ace-black px-8 xl:px-14 py-5">
       <div className="flex justify-between items-center relative text-white z-20">
         <div className="flex items-center gap-11">
-          <h1 className="text-3xl">
-            Ace<span className="text-ace-gold">Mansion</span>
-          </h1>
-
+          <Link to="/">
+            <h1 className="text-3xl">
+              Ace<span className="text-ace-gold">Mansion</span>
+            </h1>
+          </Link>
           {/* Desktop Navigation */}
           <div className=" lg:flex hidden gap-12 font-display uppercase text-[17px]">
             <Link to="about">About Us</Link>

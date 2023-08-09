@@ -3,6 +3,7 @@ import LandingPageLayout from "./layout/LandingPageLayout";
 import Homepage from "./pages/Homepage";
 import AboutPage from "./pages/AboutPage";
 import ContactUsPage from "./pages/ContactUsPage";
+import TeamPage from "./pages/TeamPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="contact" element={<ContactUsPage />} />
+          <Route path="team" element={<TeamPage />} />
         </Routes>
       </LandingPageLayout>
     </div>

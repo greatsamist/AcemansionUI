@@ -55,7 +55,6 @@ const Process = () => {
           title="Review"
           text="We will edit your footage to create a polished final product"
           bg
-          // className="text-right md:text-left"
         />
         <ProcessLine isLast />
       </div>
