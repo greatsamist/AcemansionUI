@@ -35,7 +35,7 @@ const HomeAbout = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-10 gap-4">
         <div className="col-span-1 lg:col-span-4 border-2 p-8 border-ace-black">
-          <h5 className="leading-none">
+          <h5>
             {`>`}485 <span className="block">Projects</span>
           </h5>
           <p className="mt-2 text-sm">

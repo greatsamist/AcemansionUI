@@ -1,9 +1,11 @@
-import HomeContactUs from "../components/home/HomeContactUs";
+import AboutHero from "../components/about/AboutHero";
+import WhyChooseUs from "../components/about/WhyChooseUs";
 
 const AboutPage = () => {
   return (
     <>
-      <HomeContactUs />
+      <AboutHero />
+      <WhyChooseUs />
     </>
   );
 };

@@ -22,9 +22,7 @@ const PageTitle = ({
         isCentered ? "text-center" : ""
       )}
     >
-      <h2 className={cn("text-[30px] md:text-[40px] leading-none", className)}>
-        {title}
-      </h2>
+      <h2 className={cn("text-[30px] md:text-[40px]", className)}>{title}</h2>
       <p>{subtitle}</p>
     </div>
   );

@@ -17,7 +17,10 @@ const Accordion = ({ question, answer }: AccordionProps) => {
       )}
     >
       <div
-        className="p-6 cursor-pointer flex items-start justify-between"
+        className={cn(
+          "p-6 cursor-pointer flex justify-between",
+          isOpen ? "items-start" : "items-center"
+        )}
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <div className="basis-4/5">

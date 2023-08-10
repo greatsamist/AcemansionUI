@@ -6,7 +6,7 @@ const HomeCases = () => {
     <>
       <div className="bg-ace-black text-white mt-[80px] md:mt-[120px] px-4 py-24">
         <div className="container mx-auto">
-          <h2 className="text-[30px] md:text-[40px] leading-none mb-4">
+          <h2 className="text-[30px] md:text-[40px] mb-4">
             We are proud of the work{" "}
             <span className="md:block">we've done for our clients</span>
           </h2>

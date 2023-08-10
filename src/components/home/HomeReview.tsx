@@ -8,15 +8,14 @@ import services from "../../assets/images/home/hero-1.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperCore } from "swiper/types";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { cn } from "../../lib/utils";
 
-const TESTIMONIALS_DATA = [
+export const TESTIMONIALS_DATA = [
   {
     id: "1",
     text: "I worked with the Ace Mansion Team on a corporate project and was blown away by the results. Their team was professional, creative, and easy to work with. The final product exceeded our expectations and helped us achieved our marketing goals.",
@@ -68,7 +67,7 @@ const HomeReview = () => {
         <div className="flex items-center justify-between">
           <PageTitle title="Reviews" />
 
-          <div className="flex items-center gap-2 mt-[120px] mb-[40px]">
+          <div className="flex items-center gap-2 mt-[80px] md:mt-[120px] mb-[40px]">
             <div
               onClick={() => swiperRef.current?.slidePrev()}
               className="cursor-pointer"
@@ -87,11 +86,7 @@ const HomeReview = () => {
 
       <Swiper
         slidesPerView={"auto"}
-        modules={[Autoplay, Navigation, Pagination]}
-        autoplay={{
-          delay: 3500,
-          disableOnInteraction: false,
-        }}
+        modules={[Navigation, Pagination]}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -99,19 +94,20 @@ const HomeReview = () => {
           },
           920: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 30,
           },
           1204: {
             slidesPerView: 4,
-            spaceBetween: 50,
+            spaceBetween: 30,
+          },
+          1528: {
+            slidesPerView: 5,
+            spaceBetween: 30,
           },
         }}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
-        // onActiveIndexChange={(swiperCore) => {
-        //   setActiveReview(swiperCore.activeIndex);
-        // }}
         className="swiper-review"
       >
         {TESTIMONIALS_DATA.map(({ id, image }, index) => {
@@ -126,7 +122,7 @@ const HomeReview = () => {
                   activeReview == index
                     ? "border-8 border-ace-gold"
                     : "grayscale-[80%]",
-                  "overflow-hidden w-[300px] h-[300px]"
+                  "overflow-hidden h-[350px]"
                 )}
               >
                 <img
@@ -142,7 +138,7 @@ const HomeReview = () => {
 
       <div className="container mx-auto px-4">
         <div className="border-2 border-ace-black  p-10 mt-10 text-center">
-          <h4 className="text-2xl leading-none">{`${TESTIMONIALS_DATA[activeReview].name}., ${TESTIMONIALS_DATA[activeReview].job}`}</h4>
+          <h4 className="text-2xl">{`${TESTIMONIALS_DATA[activeReview].name}., ${TESTIMONIALS_DATA[activeReview].job}`}</h4>
           <p className="w-10/12 lg:w-8/12 mx-auto mt-3 text-lg">
             {TESTIMONIALS_DATA[activeReview].text}
           </p>
