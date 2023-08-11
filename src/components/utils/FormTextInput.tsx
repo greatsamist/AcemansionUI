@@ -7,11 +7,19 @@ interface FormTextInputProps
   labelName: string;
   isNumberInput?: boolean;
   onChange?: (value: string, event: ChangeEvent<HTMLInputElement>) => void;
+  isWhiteBorder?: boolean;
 }
 
 const FormTextInput = forwardRef<HTMLInputElement, FormTextInputProps>(
   (
-    { className = "", isNumberInput, labelName, onChange, ...props },
+    {
+      className = "",
+      isNumberInput,
+      labelName,
+      onChange,
+      isWhiteBorder,
+      ...props
+    },
     ref: Ref<HTMLInputElement>
   ) => {
     return (
@@ -19,8 +27,9 @@ const FormTextInput = forwardRef<HTMLInputElement, FormTextInputProps>(
         <FormLabel labelName={labelName} />
         <input
           className={cn(
-            "flex h-10 mb-6 w-full border-b-2 border-ace-black bg-transparent font-display text-lg ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground placeholder:text-lg placeholder:font-display focus-visible:outline-none focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-            className
+            "flex h-10 mb-6 w-full border-b-2 bg-transparent font-display text-lg ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground placeholder:text-lg placeholder:font-display focus-visible:outline-none focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+            className,
+            isWhiteBorder ? "border-ace-white" : "border-ace-black"
           )}
           onChange={(e) => {
             if (isNumberInput) {

@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { selectOptionFocusHandle } from "../../lib/utils";
+import { cn, selectOptionFocusHandle } from "../../lib/utils";
 
 interface Option {
   [key: string]: any;
@@ -16,6 +16,7 @@ interface SelectOptionsProps {
   emptyOptionsMessage: string;
   handleSelectTriggerClick: () => void;
   handleOptionClick: (option: Option) => void;
+  isWhiteBorder?: boolean;
 }
 
 const SelectOptions = forwardRef<HTMLDivElement, SelectOptionsProps>(
@@ -31,6 +32,7 @@ const SelectOptions = forwardRef<HTMLDivElement, SelectOptionsProps>(
       emptyOptionsMessage,
       handleSelectTriggerClick,
       handleOptionClick,
+      isWhiteBorder,
     },
     ref
   ) => {
@@ -41,7 +43,10 @@ const SelectOptions = forwardRef<HTMLDivElement, SelectOptionsProps>(
           width: optionsWidth,
           display: isShowingOptions ? "block" : "none",
         }}
-        className="absolute overflow-auto shadow-lg bg-white border-b-2 b z-50"
+        className={cn(
+          "absolute overflow-auto shadow-lg border-b-2 b z-50",
+          isWhiteBorder ? "bg-ace-black" : "bg-white"
+        )}
       >
         {options && options.length > 0 && (
           <div

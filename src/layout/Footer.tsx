@@ -9,7 +9,7 @@ import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-ace-black mt-28 pt-20">
+    <footer className="bg-ace-black pt-20">
       <div className="container mx-auto px-4 mb-8 flex lg:flex-row lg:items-start justify-between flex-col gap-8">
         <h3 className="text-white text-4xl text-center">
           Ace<span className="text-ace-gold">Mansion</span>
@@ -19,24 +19,36 @@ const Footer = () => {
             <Link to="/">
               <h6>Home</h6>
             </Link>
-            <Link to="/about">
+            <Link to="about">
               <h6>About Us</h6>
             </Link>
-            <h6>Portfolio</h6>
-            <h6>Our Team</h6>
-            <h6>Contact Us</h6>
+            <Link to="cases">
+              <h6>Cases</h6>
+            </Link>
+            <Link to="team">
+              <h6>Our Team</h6>
+            </Link>
+            <Link to="contact">
+              <h6>Contact Us</h6>
+            </Link>
           </div>
 
           <div className="flex flex-col gap-2 items-center md:items-start">
-            <Link to="/">
+            <Link to="services">
               <h6>Promotional Video</h6>
             </Link>
-            <Link to="/about">
+            <Link to="services">
               <h6>Event Coverage</h6>
             </Link>
-            <h6>Music Video</h6>
-            <h6>Live Streaming</h6>
-            <h6>Wedding Film</h6>
+            <Link to="services">
+              <h6>Music Video</h6>
+            </Link>
+            <Link to="services">
+              <h6>Live Streaming</h6>
+            </Link>
+            <Link to="services">
+              <h6>Wedding Film</h6>
+            </Link>
           </div>
           <div className="flex flex-col gap-2 items-center md:items-start">
             <Link

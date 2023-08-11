@@ -4,6 +4,7 @@ import { ArrowDownRight } from "lucide-react";
 import SelectOptions from "./SelectOptions";
 import FormLabel from "./FormLabel";
 import useClickOutside from "../../hooks/useClickOutside";
+import { cn } from "../../lib/utils";
 
 interface Option {
   [key: string]: any;
@@ -26,6 +27,7 @@ interface FormSelectProps {
   optionsHeight?: number;
   optionsWidth?: string;
   emptyOptionsMessage?: string;
+  isWhiteBorder?: boolean;
 }
 
 const FormSelect: FC<FormSelectProps> = ({
@@ -43,6 +45,7 @@ const FormSelect: FC<FormSelectProps> = ({
   optionsHeight = 200,
   optionsWidth = "inherit",
   emptyOptionsMessage = "No options available",
+  isWhiteBorder,
 }) => {
   const [isShowingOptions, setIsShowingOptions] = useState(false);
   const optionsRef = useRef<HTMLDivElement>(null);
@@ -78,7 +81,10 @@ const FormSelect: FC<FormSelectProps> = ({
         }}
       >
         <div
-          className={`h-10 border-b-2 border-ace-black bg-transparent font-display text-lg flex items-center justify-between cursor-pointer`}
+          className={cn(
+            "h-10 border-b-2 bg-transparent font-display text-lg flex items-center justify-between cursor-pointer",
+            isWhiteBorder ? "border-white" : "border-ace-black "
+          )}
           onMouseDown={() => handleSelectTriggerClick()}
         >
           {getFormattedSelectedOptionTitle(value) ? (
@@ -105,10 +111,11 @@ const FormSelect: FC<FormSelectProps> = ({
           optionsWidth={optionsWidth}
           isShowingOptions={isShowingOptions}
           emptyOptionsMessage={emptyOptionsMessage}
+          isWhiteBorder={isWhiteBorder}
         />
       </div>
     </div>
   );
 };
 
-export default FormSelect;
+export { FormSelect };

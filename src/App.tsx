@@ -1,12 +1,18 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import LandingPageLayout from "./layout/LandingPageLayout";
 import Homepage from "./pages/Homepage";
 import AboutPage from "./pages/AboutPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import TeamPage from "./pages/TeamPage";
 import CasesPage from "./pages/CasesPage";
+import { useEffect } from "react";
 
 function App() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className="m-0 p-0">
       <LandingPageLayout>

@@ -1,8 +1,13 @@
 import { useRef, useState } from "react";
-import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
+import {
+  ArrowLeftCircle,
+  ArrowRightCircle,
+  Instagram,
+  Twitter,
+} from "lucide-react";
 import PageTitle from "../utils/PageTitle";
 import { cn } from "../../lib/utils";
-import { TESTIMONIALS_DATA } from "../home/HomeReview";
+import { SwiperBreakpoints, TEAMS_DATA } from "../../constants";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperCore } from "swiper/types";
@@ -11,17 +16,18 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
 const OurTeam = () => {
-  const [activeReview, setActiveReview] = useState(0);
+  const [activeMember, setActiveMember] = useState(0);
   const swiperRef = useRef<SwiperCore>();
 
-  const handleReviewClick = (index: number) => {
-    setActiveReview(index);
+  const handleMemberClick = (index: number) => {
+    setActiveMember(index);
   };
   return (
     <>
-      <div className="container mx-auto px-4 xl:mt-16">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between">
           <PageTitle title="Meet Our Team" />
 
@@ -30,13 +36,13 @@ const OurTeam = () => {
               onClick={() => swiperRef.current?.slidePrev()}
               className="cursor-pointer"
             >
-              <ArrowLeftCircle size="55" />
+              <ArrowLeftCircle size="40" />
             </div>
             <div
               onClick={() => swiperRef.current?.slideNext()}
               className="cursor-pointer"
             >
-              <ArrowRightCircle size="55" />
+              <ArrowRightCircle size="40" />
             </div>
           </div>
         </div>
@@ -45,42 +51,25 @@ const OurTeam = () => {
       <Swiper
         slidesPerView={"auto"}
         modules={[Navigation, Pagination]}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          920: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1204: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-          1528: {
-            slidesPerView: 5,
-            spaceBetween: 20,
-          },
-        }}
+        breakpoints={SwiperBreakpoints}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
         // onActiveIndexChange={(swiperCore) => {
-        //   setActiveReview(swiperCore.activeIndex);
+        //   setActiveMember(swiperCore.activeIndex);
         // }}
         className="swiper-review"
       >
-        {TESTIMONIALS_DATA.map(({ id, image }, index) => {
+        {TEAMS_DATA.map(({ id, image }, index) => {
           return (
             <SwiperSlide
               className="swiper-slide cursor-pointer"
               key={id}
-              onClick={() => handleReviewClick(index)}
+              onClick={() => handleMemberClick(index)}
             >
               <div
                 className={cn(
-                  activeReview == index
+                  activeMember == index
                     ? "border-8 border-ace-gold"
                     : "grayscale-[80%]",
                   "overflow-hidden h-[400px]"
@@ -98,11 +87,21 @@ const OurTeam = () => {
       </Swiper>
 
       <div className="container mx-auto px-4">
-        <div className="border-2 border-ace-black  p-10 mt-10 text-center">
-          <h4 className="text-2xl">{`${TESTIMONIALS_DATA[activeReview].name}., ${TESTIMONIALS_DATA[activeReview].job}`}</h4>
+        <div className="border-2 border-ace-black p-10 mt-10 text-center">
+          <h4 className="text-2xl">{`${TEAMS_DATA[activeMember].name}., ${TEAMS_DATA[activeMember].job}`}</h4>
           <p className="w-10/12 lg:w-8/12 mx-auto mt-3 text-lg">
-            {TESTIMONIALS_DATA[activeReview].text}
+            {TEAMS_DATA[activeMember].text}
           </p>
+          <div className="flex items-center justify-center gap-4 mt-3">
+            <Link
+              to={`${TEAMS_DATA[activeMember]?.instagram}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram />
+            </Link>
+            <Twitter />
+          </div>
         </div>
       </div>
     </>

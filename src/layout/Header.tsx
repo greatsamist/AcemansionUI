@@ -6,7 +6,7 @@ const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <header className="bg-ace-black px-8 xl:px-14 py-5">
+    <header className="bg-ace-black px-8 xl:px-14 py-5 sticky top-0 z-50">
       <div className="flex justify-between items-center relative text-white z-20">
         <div className="flex items-center gap-11">
           <Link to="/">
@@ -17,9 +17,8 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className=" lg:flex hidden gap-12 font-display uppercase text-[17px]">
             <Link to="about">About Us</Link>
-            <Link to="about">Services</Link>
-            <Link to="about">Cases</Link>
-            <Link to="portfolio">Portfolio</Link>
+            <Link to="cases">Cases</Link>
+            <Link to="services">Services</Link>
             <Link to="team">Our Team</Link>
           </div>
         </div>
@@ -52,21 +51,23 @@ const Header = () => {
           isNavOpen ? "block" : "hidden"
         }  lg:hidden pt-8 pb-8 font-display gap-2 pr-4 flex flex-col border-b-[0.5px] z-10`}
       >
-        <NavItem label="Home" />
-        <NavItem label="About Us" />
-        <NavItem label="Portfolio" />
-        <NavItem label="Our Team" />
-        <NavItem label="Contact Us" />
+        <NavItem link="/" label="Home" />
+        <NavItem link="about" label="About Us" />
+        <NavItem link="cases" label="Cases" />
+        <NavItem link="team" label="Our Team" />
+        <NavItem link="contact" label="Contact Us" />
       </div>
     </header>
   );
 };
 
 // Navigation Item Component
-const NavItem = ({ label }: { label: string }) => {
+const NavItem = ({ label, link }: { label: string; link: string }) => {
   return (
     <div className="flex justify-between items-center text-white">
-      <div className="text-[16px] font-display uppercase">{label}</div>
+      <div className="text-[16px] font-display uppercase">
+        <Link to={link}>{label} </Link>
+      </div>
       <ArrowDownRight />
     </div>
   );

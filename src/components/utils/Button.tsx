@@ -12,7 +12,7 @@ const buttonVariants = cva(
           "bg-ace-gold text-ace-black border-b border-t-2 border-ace-black hover:bg-transparent hover:text-ace-black hover:outline-t-[1px] hover:outline-b-2 hover:outline-ace-black focus:outline focus:outline-1 focus:outline-ace-gold",
         destructive: "text-white hover:bg-red-600 dark:hover:bg-red-600",
         outline:
-          "bg-transparent text-ace-black border-y hover:bg-ace-gold outline outline-2 outline-ace-black",
+          "bg-transparent text-white hover:text-white border-t-2 border-b hover:bg-ace-gold outline outline-2 outline-ace-black",
         link: "bg-transparent text-ace-black hover:bg-ace-gold outline outline-2 outline-ace-black",
       },
       size: {

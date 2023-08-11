@@ -4,7 +4,7 @@ import aboutImage from "../../assets/images/home/hero-1.jpg";
 
 const WhyChooseUs = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 mb-28">
       <PageTitle title="Why Choose Us?" />
 
       <div className="grid grid-cols-1 lg:grid-cols-8 grid-rows-1 lg:grid-rows-17 gap-y-4 lg:gap-y-0 lg:gap-x-4 mb-5">
