@@ -81,20 +81,37 @@ export const TEAMS_DATA = [
 ];
 
 export const SwiperBreakpoints = {
-  640: {
+  576: {
     slidesPerView: 2,
-    spaceBetween: 10,
   },
-  920: {
+  768: {
     slidesPerView: 3,
-    spaceBetween: 20,
   },
-  1204: {
+  1024: {
     slidesPerView: 4,
-    spaceBetween: 20,
+  },
+  1280: {
+    slidesPerView: 5,
   },
   1528: {
-    slidesPerView: 5,
-    spaceBetween: 20,
+    slidesPerView: 6,
   },
 };
+
+export const SERVICES_DATA = [
+  {
+    id: "1",
+    image: services3,
+    title: "Corporate Videos",
+  },
+  {
+    id: "2",
+    image: services2,
+    title: "Event Coverage",
+  },
+  {
+    id: "3",
+    image: services4,
+    title: "Music Videos",
+  },
+];

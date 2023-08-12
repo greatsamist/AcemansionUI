@@ -1,4 +1,4 @@
-import PageTitle from "../utils/PageTitle";
+import SectionHeader from "../utils/SectionHeader";
 import services4 from "../../assets/images/home/services-4.jpg";
 import services2 from "../../assets/images/home/services-2.jpg";
 import services3 from "../../assets/images/home/services-3.jpg";
@@ -25,7 +25,7 @@ const SERVICES = [
 const HomeServices = () => {
   return (
     <div className="container mx-auto px-4">
-      <PageTitle
+      <SectionHeader
         title="Our Services"
         subtitle="We offer a range of services to meet your video production needs"
       />

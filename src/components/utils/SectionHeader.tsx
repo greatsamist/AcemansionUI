@@ -1,6 +1,6 @@
 import { cn } from "../../lib/utils";
 
-interface PageTitleProps {
+interface SectionHeaderProps {
   title: string;
   subtitle?: string;
   className?: string;
@@ -8,24 +8,25 @@ interface PageTitleProps {
   isCentered?: boolean;
 }
 
-const PageTitle = ({
+const SectionHeader = ({
   title,
   subtitle,
   className,
   sectionMargin = true,
   isCentered = false,
-}: PageTitleProps) => {
+}: SectionHeaderProps) => {
   return (
     <div
       className={cn(
         sectionMargin ? "mt-[80px] md:mt-[120px] mb-[40px]" : "",
-        isCentered ? "text-center" : ""
+        isCentered ? "text-center" : "",
+        className
       )}
     >
-      <h2 className={cn("text-[30px] md:text-[40px]", className)}>{title}</h2>
-      <p>{subtitle}</p>
+      <h2 className="text-[30px] md:text-[40px]">{title}</h2>
+      <p className="mt-2">{subtitle}</p>
     </div>
   );
 };
 
-export default PageTitle;
+export default SectionHeader;

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
-import PageTitle from "../utils/PageTitle";
+import SectionHeader from "../utils/SectionHeader";
 import { SwiperBreakpoints, TESTIMONIALS_DATA } from "../../constants";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -24,7 +24,7 @@ const HomeReview = () => {
     <>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <PageTitle title="Reviews" />
+          <SectionHeader title="Reviews" />
 
           <div className="flex items-center gap-2 mt-[80px] md:mt-[120px] mb-[40px]">
             <div
@@ -46,6 +46,7 @@ const HomeReview = () => {
       <Swiper
         slidesPerView={"auto"}
         modules={[Navigation, Pagination]}
+        spaceBetween={20}
         breakpoints={SwiperBreakpoints}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;

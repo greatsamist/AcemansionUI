@@ -1,4 +1,4 @@
-import PageTitle from "../utils/PageTitle";
+import SectionHeader from "../utils/SectionHeader";
 import goldBg from "../../assets/images/gold-bg.jpg";
 import { cn } from "../../lib/utils";
 import { CSSProperties } from "react";
@@ -6,7 +6,7 @@ import { CSSProperties } from "react";
 const Process = () => {
   return (
     <div className="container mx-auto px-4">
-      <PageTitle
+      <SectionHeader
         isCentered
         title="Our Process"
         subtitle="When you work with us, we will guide you through our production process, which includes"

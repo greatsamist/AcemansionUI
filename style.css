@@ -42,7 +42,6 @@
     font-size: 16px;
     color: #fff;
   }
-
   .swiper-slide-shadow-left,
   .swiper-slide-shadow-right {
     display: none;
@@ -131,4 +130,9 @@
 
 .open .hamburger span:nth-child(2) {
   transform: rotate(-45deg) translate(-5px, 13px);
+}
+
+/* target all bullets */
+.swiper-pagination-bullet-active {
+  background-color: #deaa4c !important;
 }

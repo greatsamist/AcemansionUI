@@ -9,13 +9,13 @@ import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-ace-black pt-20">
-      <div className="container mx-auto px-4 mb-8 flex lg:flex-row lg:items-start justify-between flex-col gap-8">
+    <footer className="bg-ace-black pt-24">
+      <div className="container mx-auto px-4 mb-16 flex lg:flex-row lg:items-start justify-between flex-col gap-8">
         <h3 className="text-white text-4xl text-center">
           Ace<span className="text-ace-gold">Mansion</span>
         </h3>
         <div className="lg:basis-7/12 xl:basis-6/12 flex flex-col md:flex-row items-center lg:items-start justify-between gap-10 lg:gap-5 ">
-          <div className="flex flex-col gap-2 items-center md:items-start">
+          <div className="flex flex-col gap-3 items-center md:items-start">
             <Link to="/">
               <h6>Home</h6>
             </Link>
@@ -33,7 +33,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col gap-2 items-center md:items-start">
+          <div className="flex flex-col gap-3 items-center md:items-start">
             <Link to="services">
               <h6>Promotional Video</h6>
             </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
               <h6>Wedding Film</h6>
             </Link>
           </div>
-          <div className="flex flex-col gap-2 items-center md:items-start">
+          <div className="flex flex-col gap-3 items-center md:items-start">
             <Link
               className="flex items-center gap-1"
               to="https://www.instagram.com/acemansion/"
@@ -91,7 +91,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-10 border-t-[1px] border-t-ace-gold pb-14 pt-7">
+      <div className="mt-10 border-t-[1px] border-t-white pb-14 pt-7">
         <p className="text-center text-[14px] text-gray-400">
           &copy; 2023 Ace Mansion Studio, All Rights Reserved
         </p>

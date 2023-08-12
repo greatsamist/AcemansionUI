@@ -1,11 +1,15 @@
 import Accordion from "../utils/Accordion";
-import PageTitle from "../utils/PageTitle";
+import SectionHeader from "../utils/SectionHeader";
 
 const HomeFaqs = () => {
   return (
     <div className="bg-ace-black py-24 mt-[120px] mb-[40px]">
       <div className="container mx-auto px-4">
-        <PageTitle className="text-white" title="FAQS" sectionMargin={false} />
+        <SectionHeader
+          className="text-white"
+          title="FAQS"
+          sectionMargin={false}
+        />
 
         <div className="flex flex-col gap-4 mt-8">
           <Accordion

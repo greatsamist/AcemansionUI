@@ -1,4 +1,4 @@
-import PageTitle from "../utils/PageTitle";
+import SectionHeader from "../utils/SectionHeader";
 import aboutImage from "../../assets/images/home/hero-2.jpg";
 import goldBg from "../../assets/images/gold-bg.jpg";
 import { ArrowDownRight } from "lucide-react";
@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const HomeAbout = () => {
   return (
     <div className="container mx-auto px-4">
-      <PageTitle title="About Ace Mansion Studio" />
+      <SectionHeader title="About Ace Mansion Studio" />
       <div className="grid grid-cols-1 lg:grid-cols-8 grid-rows-1 lg:grid-rows-17 gap-y-4 lg:gap-y-0 lg:gap-x-4 mb-5">
         <div className="col-span-1 lg:col-span-4 row-span-1 lg:row-span-17">
           <img className="object-cover w-full h-full" src={aboutImage} />

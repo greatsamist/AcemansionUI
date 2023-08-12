@@ -5,7 +5,7 @@ import {
   Instagram,
   Twitter,
 } from "lucide-react";
-import PageTitle from "../utils/PageTitle";
+import SectionHeader from "../utils/SectionHeader";
 import { cn } from "../../lib/utils";
 import { SwiperBreakpoints, TEAMS_DATA } from "../../constants";
 
@@ -29,7 +29,7 @@ const OurTeam = () => {
     <>
       <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between">
-          <PageTitle title="Meet Our Team" />
+          <SectionHeader title="Meet Our Team" />
 
           <div className="flex items-center gap-2 sm:mt-[80px] md:mt-[120px] mb-[40px]">
             <div
@@ -51,13 +51,11 @@ const OurTeam = () => {
       <Swiper
         slidesPerView={"auto"}
         modules={[Navigation, Pagination]}
+        spaceBetween={20}
         breakpoints={SwiperBreakpoints}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
         }}
-        // onActiveIndexChange={(swiperCore) => {
-        //   setActiveMember(swiperCore.activeIndex);
-        // }}
         className="swiper-review"
       >
         {TEAMS_DATA.map(({ id, image }, index) => {
@@ -86,7 +84,7 @@ const OurTeam = () => {
         })}
       </Swiper>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mb-28">
         <div className="border-2 border-ace-black p-10 mt-10 text-center">
           <h4 className="text-2xl">{`${TEAMS_DATA[activeMember].name}., ${TEAMS_DATA[activeMember].job}`}</h4>
           <p className="w-10/12 lg:w-8/12 mx-auto mt-3 text-lg">

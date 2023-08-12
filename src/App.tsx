@@ -6,6 +6,7 @@ import ContactUsPage from "./pages/ContactUsPage";
 import TeamPage from "./pages/TeamPage";
 import CasesPage from "./pages/CasesPage";
 import { useEffect } from "react";
+import ServicesPage from "./pages/ServicesPage";
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="cases" element={<CasesPage />} />
           <Route path="contact" element={<ContactUsPage />} />
+          <Route path="services" element={<ServicesPage />} />
           <Route path="team" element={<TeamPage />} />
         </Routes>
       </LandingPageLayout>

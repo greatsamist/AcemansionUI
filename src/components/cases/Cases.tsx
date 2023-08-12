@@ -3,7 +3,7 @@ import { SwiperBreakpoints } from "../../constants";
 import { CASES_DATA } from "../../constants/cases";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import { COLORS, cn } from "../../lib/utils";
-import PageTitle from "../utils/PageTitle";
+import SectionHeader from "../utils/SectionHeader";
 import ReactPlayer from "react-player/youtube";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,7 +27,7 @@ const Cases = () => {
     <div className="bg-ace-black text-white pb-24">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <PageTitle title="Cases" />
+          <SectionHeader title="Cases" />
 
           <div className="flex items-center gap-2 mt-[80px] md:mt-[120px] mb-[40px]">
             <div
@@ -57,6 +57,7 @@ const Cases = () => {
       <Swiper
         slidesPerView={"auto"}
         modules={[Navigation, Pagination]}
+        spaceBetween={20}
         breakpoints={SwiperBreakpoints}
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
@@ -65,6 +66,7 @@ const Cases = () => {
         //   setActiveCase(swiperCore.activeIndex);
         // }}
         className="swiper-cases"
+        pagination={true}
       >
         {CASES_DATA.map(({ id, image }, index) => {
           return (
