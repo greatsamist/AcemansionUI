@@ -1,3 +1,5 @@
+import { useRef } from "react";
+import { cn } from "../../lib/utils";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
 import goldBg from "../../assets/images/gold-bg.jpg";
 
@@ -8,13 +10,12 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { useRef } from "react";
-import { cn } from "../../lib/utils";
 
 interface Stage {
   subtitle?: string;
   description?: string;
   bg?: string;
+  stageId?: string;
 }
 
 interface StagesOfWorkItemProps {
@@ -69,12 +70,12 @@ const StagesOfWorkItem = ({
         }}
         className="swiper-stages"
       >
-        {stage?.map(({ subtitle, description, bg }) => {
+        {stage?.map(({ subtitle, description, bg, stageId }) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={stageId}>
               <div
                 className={cn(
-                  "p-10 text-black h-[250px]",
+                  "p-10 text-black h-[300px] sm:h-[250px] overflow-auto",
                   bg == "white"
                     ? "bg-white"
                     : bg == "gold"

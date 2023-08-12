@@ -1,9 +1,18 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowDownRight } from "lucide-react";
+import NavItem from "./NavItem";
+import { NAV_ITEMS } from "../constants";
+import { COLORS, cn } from "../lib/utils";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [currentLocation, setCurrentLocation] = useState("/");
+  const location = useLocation();
+
+  useEffect(() => {
+    setCurrentLocation(location.pathname);
+  }, [location]);
 
   return (
     <header className="bg-ace-black px-8 xl:px-14 py-5 sticky top-0 z-50">
@@ -16,20 +25,34 @@ const Header = () => {
           </Link>
           {/* Desktop Navigation */}
           <div className=" lg:flex hidden gap-12 font-display uppercase text-[17px]">
-            <Link to="about">About Us</Link>
-            <Link to="cases">Cases</Link>
-            <Link to="services">Services</Link>
-            <Link to="team">Our Team</Link>
+            {NAV_ITEMS.map(({ id, link, label }) => (
+              <Link
+                key={id}
+                className={
+                  currentLocation == link ? "text-ace-gold" : "text-white"
+                }
+                to={link}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
         </div>
 
         <div>
           <Link
             to="contact"
-            className="font-display text-[17px] lg:flex hidden items-center gap-1 uppercase"
+            className={cn(
+              "font-display text-[17px] lg:flex hidden items-center gap-1 uppercase",
+              currentLocation == "/contact" ? "text-ace-gold" : "text-white"
+            )}
           >
             Contact Us
-            <ArrowDownRight color="white" />
+            <ArrowDownRight
+              color={
+                currentLocation == "/contact" ? COLORS.aceGold : COLORS.white
+              }
+            />
           </Link>
         </div>
 
@@ -51,26 +74,30 @@ const Header = () => {
           isNavOpen ? "block" : "hidden"
         }  lg:hidden pt-8 pb-8 font-display gap-2 pr-4 flex flex-col border-b-[0.5px] z-10`}
       >
-        <NavItem link="/" label="Home" />
-        <NavItem link="about" label="About Us" />
-        <NavItem link="cases" label="Cases" />
-        <NavItem link="services" label="Services" />
-        <NavItem link="team" label="Our Team" />
-        <NavItem link="contact" label="Contact Us" />
+        <NavItem
+          currentLocation={currentLocation}
+          link={"/"}
+          label={"Home"}
+          setIsNavOpen={setIsNavOpen}
+        />
+        {NAV_ITEMS.map(({ id, link, label }) => (
+          <div key={id}>
+            <NavItem
+              currentLocation={currentLocation}
+              link={link}
+              label={label}
+              setIsNavOpen={setIsNavOpen}
+            />
+          </div>
+        ))}
+        <NavItem
+          currentLocation={currentLocation}
+          link={"contact"}
+          label={"Contact Us"}
+          setIsNavOpen={setIsNavOpen}
+        />
       </div>
     </header>
-  );
-};
-
-// Navigation Item Component
-const NavItem = ({ label, link }: { label: string; link: string }) => {
-  return (
-    <div className="flex justify-between items-center text-white">
-      <div className="text-[16px] font-display uppercase">
-        <Link to={link}>{label} </Link>
-      </div>
-      <ArrowDownRight />
-    </div>
   );
 };
 

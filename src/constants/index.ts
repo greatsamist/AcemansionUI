@@ -115,3 +115,26 @@ export const SERVICES_DATA = [
     title: "Music Videos",
   },
 ];
+
+export const NAV_ITEMS = [
+  {
+    id: "1",
+    link: "/about",
+    label: "About",
+  },
+  {
+    id: "2",
+    link: "/cases",
+    label: "Cases",
+  },
+  {
+    id: "3",
+    link: "/services",
+    label: "Services",
+  },
+  {
+    id: "4",
+    link: "/team",
+    label: "Our Team",
+  },
+];

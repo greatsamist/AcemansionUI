@@ -39,4 +39,5 @@ export const COLORS = {
   aceGold: "#DEAA4C",
   aceBlack: "#272A34",
   aceDarker: "#21292A",
+  white: "#fff",
 };
