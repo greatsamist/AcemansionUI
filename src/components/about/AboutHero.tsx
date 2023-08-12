@@ -1,4 +1,5 @@
 import aboutImage from "../../assets/images/home/hero-2.jpg";
+import { CardHeroTitle } from "../utils/Card";
 
 const AboutHero = () => {
   return (
@@ -8,13 +9,13 @@ const AboutHero = () => {
       </div>
 
       <div className="col-span-3 border-b-2 border-ace-black flex flex-col justify-center pl-8 py-6 pr-4">
-        <h2 className="text-3xl lg:text-4xl xl:text-5xl">
+        <CardHeroTitle>
           <span className="md:block">Creating </span>
           <span className="md:block md:pl-20">Compelling </span>
           <span className="">Videos for </span>
           <span className="md:block md:pl-20">Businesses </span>
           <span className="md:block">And Individuals</span>
-        </h2>
+        </CardHeroTitle>
       </div>
     </div>
   );

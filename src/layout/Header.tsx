@@ -54,6 +54,7 @@ const Header = () => {
         <NavItem link="/" label="Home" />
         <NavItem link="about" label="About Us" />
         <NavItem link="cases" label="Cases" />
+        <NavItem link="services" label="Services" />
         <NavItem link="team" label="Our Team" />
         <NavItem link="contact" label="Contact Us" />
       </div>

@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
         </div>
 
         <div
-          className="min-h-[200px] grid place-items-center text-center bg-cover bg-center bg-no-repeat border-r-2 col-span-1 lg:col-span-3"
+          className="min-h-[200px] grid place-items-center text-center bg-cover bg-center bg-no-repeat border-r-2 col-span-1 lg:col-span-3 p-8"
           style={{ backgroundImage: `url(${goldBg})` }}
         >
           <h5 className="text-ace-black">Experience And Creative Team</h5>

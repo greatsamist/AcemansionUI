@@ -1,4 +1,5 @@
 import aboutImage from "../../assets/images/home/services-3.jpg";
+import { CardHeroTitle } from "../utils/Card";
 
 const ServicesHero = () => {
   return (
@@ -7,13 +8,13 @@ const ServicesHero = () => {
         <img className="object-cover w-full h-full" src={aboutImage} />
       </div>
 
-      <div className="col-span-3 border-b-2 border-ace-black flex flex-col justify-center pl-8 py-6 pr-4">
-        <h2 className="text-4xl lg:text-5xl xl:text-6xl">
+      <div className="col-span-3 border-b-2 border-ace-black flex flex-col justify-center px-4 md:px-8 py-6">
+        <CardHeroTitle>
           <span className="md:block">Transforming </span>
           <span className="md:block md:pl-20">Visions into </span>
           <span className="">Mesmerizing </span>
           <span className="md:block md:pl-20">Videos</span>
-        </h2>
+        </CardHeroTitle>
       </div>
     </div>
   );

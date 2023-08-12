@@ -5,7 +5,7 @@ import {
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { COLORS } from "../lib/utils";
-import { FaTiktok } from "react-icons/fa";
+import { FaTiktok, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -17,13 +17,16 @@ const Footer = () => {
         <div className="lg:basis-7/12 xl:basis-6/12 flex flex-col md:flex-row items-center lg:items-start justify-between gap-10 lg:gap-5 ">
           <div className="flex flex-col gap-3 items-center md:items-start">
             <Link to="/">
-              <h6>Home</h6>
+              <h6>Home Page</h6>
             </Link>
             <Link to="about">
               <h6>About Us</h6>
             </Link>
             <Link to="cases">
               <h6>Cases</h6>
+            </Link>
+            <Link to="services">
+              <h6>Services</h6>
             </Link>
             <Link to="team">
               <h6>Our Team</h6>
@@ -77,6 +80,15 @@ const Footer = () => {
             >
               <h6>Youtube</h6>
               <AiFillYoutube size={22} color={COLORS.aceGold} />
+            </Link>
+            <Link
+              className="flex items-center gap-1"
+              to="https://www.tiktok.com/@acemansionstudios"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h6>Twitter</h6>
+              <FaTwitter size={15} color={COLORS.aceGold} />
             </Link>
             <Link
               className="flex items-center gap-1"
