@@ -1,4 +1,5 @@
 import { cn } from "../../lib/utils";
+import { Reveal } from "./Reveal";
 
 interface SectionHeaderProps {
   title: string;
@@ -23,8 +24,12 @@ const SectionHeader = ({
         className
       )}
     >
-      <h2 className="text-[30px] md:text-[40px]">{title}</h2>
-      <p className="mt-2">{subtitle}</p>
+      <Reveal bg="gold">
+        <h2 className="text-[30px] md:text-[40px]">{title}</h2>
+      </Reveal>
+      <Reveal>
+        <p className="mt-2">{subtitle}</p>
+      </Reveal>
     </div>
   );
 };

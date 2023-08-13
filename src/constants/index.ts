@@ -2,6 +2,13 @@ import services4 from "../assets/images/home/services-4.jpg";
 import services2 from "../assets/images/home/services-2.jpg";
 import services3 from "../assets/images/home/services-3.jpg";
 import services from "../assets/images/home/hero-1.jpg";
+import ralph from "../assets/images/team/ralph.jpeg";
+import ola from "../assets/images/team/ola.jpg";
+import morgan from "../assets/images/team/morgan.jpg";
+import laolu from "../assets/images/team/laolu.jpeg";
+import sam from "../assets/images/team/sam.jpeg";
+import bayo from "../assets/images/team/bayo.jpeg";
+import mayor from "../assets/images/team/mayor.jpg";
 
 export const TESTIMONIALS_DATA = [
   {
@@ -44,39 +51,54 @@ export const TESTIMONIALS_DATA = [
 export const TEAMS_DATA = [
   {
     id: "1",
-    text: "I worked with the Ace Mansion Team on a corporate project and was blown away by the results. Their team was professional, creative, and easy to work with. The final product exceeded our expectations and helped us achieved our marketing goals.",
-    image: services4,
-    name: "Akin Oduwole",
-    job: "Managing Director",
-    instagram: "http://instagram.com",
+    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
+    image: sam,
+    name: "Samuel Ojo",
+    job: "Producer",
   },
   {
     id: "2",
-    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
-    image: services,
-    name: "Veekie Royice",
-    job: "Music Artist",
+    text: "I worked with the Ace Mansion Team on a corporate project and was blown away by the results. Their team was professional, creative, and easy to work with. The final product exceeded our expectations and helped us achieved our marketing goals.",
+    image: ralph,
+    name: "Raphael Adekanye",
+    job: "Director",
+    instagram: "http://instagram.com",
   },
   {
     id: "3",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
-    image: services3,
-    name: "Mike Abdul",
-    job: "Music Artist",
+    image: ola,
+    name: "Michael Wisdom",
+    job: "Cinematographer",
   },
   {
     id: "4",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
-    image: services2,
-    name: "Israel Ayodeji",
-    job: "CEO Web3Bridge",
+    image: morgan,
+    name: "Lanre Morgan",
+    job: "Cinematographer",
   },
   {
     id: "5",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
-    image: services3,
-    name: "Veekie Royice",
-    job: "Music Artist",
+    image: laolu,
+    name: "Daniel Olatunde-Matthew",
+    job: "DOP",
+  },
+  {
+    id: "6",
+    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
+    image: mayor,
+    name: "Mayowa Victor",
+    job: "Photographer",
+    instagram: "https://www.instagram.com/p/CcUeiDgDCNA/",
+  },
+  {
+    id: "7",
+    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
+    image: bayo,
+    name: "Adebayo Kasali",
+    job: "DOP",
   },
 ];
 

@@ -2,6 +2,7 @@ import SectionHeader from "../utils/SectionHeader";
 import goldBg from "../../assets/images/gold-bg.jpg";
 import { cn } from "../../lib/utils";
 import { CSSProperties } from "react";
+import { Reveal } from "../utils/Reveal";
 
 const Process = () => {
   return (
@@ -115,8 +116,12 @@ const ProcessContent = ({
       )}
       style={bg ? { backgroundImage: `url(${goldBg})` } : {}}
     >
-      <h5>{title}</h5>
-      <p>{text}</p>
+      <Reveal>
+        <h5>{title}</h5>
+      </Reveal>
+      <Reveal>
+        <p>{text}</p>
+      </Reveal>
     </div>
   );
 };

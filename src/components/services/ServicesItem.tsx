@@ -1,5 +1,6 @@
 import goldBg from "../../assets/images/gold-bg.jpg";
 import { cn } from "../../lib/utils";
+import { Reveal } from "../utils/Reveal";
 interface ServicesItemProps {
   key: string;
   id?: string;
@@ -19,7 +20,7 @@ const ServicesItem = ({
   description,
 }: ServicesItemProps) => {
   return (
-    <div
+    <Reveal
       className={cn("grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10")}
       key={id}
     >
@@ -43,10 +44,14 @@ const ServicesItem = ({
         )}
         style={{ backgroundImage: bg == "gold" ? `url(${goldBg})` : "" }}
       >
-        <h5 className="text-2xl mb-2">{title}</h5>
-        <p>{description}</p>
+        <Reveal>
+          <h5 className="text-2xl mb-2">{title}</h5>
+        </Reveal>
+        <Reveal>
+          <p>{description}</p>
+        </Reveal>
       </div>
-    </div>
+    </Reveal>
   );
 };
 

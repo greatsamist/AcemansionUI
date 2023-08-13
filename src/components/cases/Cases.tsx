@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { SwiperBreakpoints } from "../../constants";
 import { CASES_DATA } from "../../constants/cases";
 import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
-import { COLORS, cn } from "../../lib/utils";
+import { cn } from "../../lib/utils";
 import SectionHeader from "../utils/SectionHeader";
 import ReactPlayer from "react-player/youtube";
 
@@ -35,7 +35,7 @@ const Cases = () => {
               className={"cursor-pointer"}
             >
               <ArrowLeftCircle
-                color={activeCase == 0 ? "gray" : COLORS.aceGold}
+                // color={activeCase == 0 ? "gray" : COLORS.aceGold}
                 size="40"
               />
             </div>
@@ -44,9 +44,9 @@ const Cases = () => {
               className="cursor-pointer"
             >
               <ArrowRightCircle
-                color={
-                  activeCase == CASES_DATA.length - 1 ? "gray" : COLORS.aceGold
-                }
+                // color={
+                //   activeCase == CASES_DATA.length - 1 ? "gray" : COLORS.aceGold
+                // }
                 size="40"
               />
             </div>
@@ -114,7 +114,12 @@ const Cases = () => {
                 controls
               />
             ) : (
-              <img src={CASES_DATA[activeCase]?.image} />
+              <img
+                src={
+                  CASES_DATA[activeCase]?.image2 ||
+                  CASES_DATA[activeCase]?.image
+                }
+              />
             )}
           </div>
           <h5 className="mt-10">The Objective</h5>

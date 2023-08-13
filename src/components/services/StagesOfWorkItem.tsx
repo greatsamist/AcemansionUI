@@ -87,6 +87,7 @@ const StagesOfWorkItem = ({
                 }}
               >
                 <h3 className="text-xl mb-3">{subtitle}</h3>
+
                 <p>{description}</p>
               </div>
             </SwiperSlide>

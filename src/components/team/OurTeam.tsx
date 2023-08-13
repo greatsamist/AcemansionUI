@@ -98,7 +98,6 @@ const OurTeam = () => {
             >
               <Instagram />
             </Link>
-            <Twitter />
           </div>
         </div>
       </div>
