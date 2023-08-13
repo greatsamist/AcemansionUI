@@ -62,7 +62,7 @@ export const TEAMS_DATA = [
     image: ralph,
     name: "Raphael Adekanye",
     job: "Director",
-    instagram: "http://instagram.com",
+    instagram: "https://www.instagram.com/iamralphkanye/",
   },
   {
     id: "3",

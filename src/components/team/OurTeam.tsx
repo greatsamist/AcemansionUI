@@ -1,13 +1,9 @@
 import { useRef, useState } from "react";
-import {
-  ArrowLeftCircle,
-  ArrowRightCircle,
-  Instagram,
-  Twitter,
-} from "lucide-react";
+import { ArrowLeftCircle, ArrowRightCircle, Instagram } from "lucide-react";
 import SectionHeader from "../utils/SectionHeader";
 import { cn } from "../../lib/utils";
 import { SwiperBreakpoints, TEAMS_DATA } from "../../constants";
+import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperCore } from "swiper/types";
@@ -16,7 +12,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Link } from "react-router-dom";
 
 const OurTeam = () => {
   const [activeMember, setActiveMember] = useState(0);
@@ -90,15 +85,17 @@ const OurTeam = () => {
           <p className="w-10/12 lg:w-8/12 mx-auto mt-3 text-lg">
             {TEAMS_DATA[activeMember].text}
           </p>
-          <div className="flex items-center justify-center gap-4 mt-3">
-            <Link
-              to={`${TEAMS_DATA[activeMember]?.instagram}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Instagram />
-            </Link>
-          </div>
+          {TEAMS_DATA[activeMember]?.instagram ? (
+            <div className="flex items-center justify-center gap-4 mt-3">
+              <Link
+                to={`${TEAMS_DATA[activeMember].instagram}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram />
+              </Link>
+            </div>
+          ) : null}
         </div>
       </div>
     </>
