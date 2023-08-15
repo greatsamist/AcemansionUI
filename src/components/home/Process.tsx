@@ -1,8 +1,5 @@
 import SectionHeader from "../utils/SectionHeader";
-import goldBg from "../../assets/images/gold-bg.jpg";
-import { cn } from "../../lib/utils";
-import { CSSProperties } from "react";
-import { Reveal } from "../utils/Reveal";
+import { ProcessContent, ProcessLine } from "./ProcessContent";
 
 const Process = () => {
   return (
@@ -59,69 +56,6 @@ const Process = () => {
         />
         <ProcessLine isLast />
       </div>
-    </div>
-  );
-};
-
-interface ProcessLineProps {
-  isStart?: boolean;
-  isLast?: boolean;
-  className?: string;
-}
-
-const ProcessLine = ({ isStart, isLast, className }: ProcessLineProps) => {
-  return (
-    <div
-      className={cn(
-        "col-span-1 flex flex-col items-center ",
-        isStart ? "justify-end" : isLast ? "justify-start" : "justify-center",
-        className
-      )}
-    >
-      <div
-        className={cn(isStart ? "hidden" : "", "bg-ace-black h-2/4 w-1")}
-      ></div>
-      <div
-        className={cn(
-          isLast || isStart ? "" : "absolute",
-          "bg-ace-gold h-5 w-5 rounded-full"
-        )}
-      ></div>
-      <div
-        className={cn(isLast ? "hidden" : "", "bg-ace-black h-2/4 w-1")}
-      ></div>
-    </div>
-  );
-};
-interface ProcessContentProps {
-  title?: string;
-  text?: string;
-  className?: string;
-  style?: CSSProperties;
-  bg?: boolean;
-}
-
-const ProcessContent = ({
-  title,
-  text,
-  className = "text-right",
-  bg,
-}: ProcessContentProps) => {
-  return (
-    <div
-      className={cn(
-        "col-span-8 md:col-span-4 p-6 mb-4 md:mb-0",
-        bg ? "bg-ace-gold bg-center bg-no-repeat bg-cover" : "bg-ace-black",
-        className
-      )}
-      style={bg ? { backgroundImage: `url(${goldBg})` } : {}}
-    >
-      <Reveal>
-        <h5>{title}</h5>
-      </Reveal>
-      <Reveal>
-        <p>{text}</p>
-      </Reveal>
     </div>
   );
 };

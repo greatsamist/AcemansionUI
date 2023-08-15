@@ -74,7 +74,7 @@ const Footer = () => {
             </Link>
             <Link
               className="flex items-center gap-1"
-              to="https://www.tiktok.com/@acemansionstudios"
+              to="https://www.youtube.com/acemansion"
               target="_blank"
               rel="noopener noreferrer"
             >

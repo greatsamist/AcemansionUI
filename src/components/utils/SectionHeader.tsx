@@ -24,10 +24,10 @@ const SectionHeader = ({
         className
       )}
     >
-      <Reveal bg="gold">
+      <Reveal width="100%" bg="gold">
         <h2 className="text-[30px] md:text-[40px]">{title}</h2>
       </Reveal>
-      <Reveal>
+      <Reveal width="100%">
         <p className="mt-2">{subtitle}</p>
       </Reveal>
     </div>

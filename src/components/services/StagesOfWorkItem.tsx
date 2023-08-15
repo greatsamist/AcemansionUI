@@ -34,7 +34,10 @@ const StagesOfWorkItem = ({
   const swiperRef = useRef<SwiperCore>();
   return (
     <>
-      <div className="flex items-center justify-between mt-14 mb-3" key={id}>
+      <div
+        className="flex items-center justify-between gap-5 mt-14 mb-3"
+        key={id}
+      >
         <h5
           className={cn(
             "text-2xl",
