@@ -9,41 +9,52 @@ import laolu from "../assets/images/team/laolu.jpeg";
 import sam from "../assets/images/team/sam.jpeg";
 import bayo from "../assets/images/team/bayo.jpeg";
 import mayor from "../assets/images/team/mayor.jpg";
+import techglobal from "../assets/images/reviews/techglobal.jpg";
+import vr from "../assets/images/reviews/vr.jpg";
+import ayo from "../assets/images/reviews/ayo.jpg";
+import mikeBabaEse from "../assets/images/cases/Mike-Abdul-Baba-Ese.jpg";
 
 export const TESTIMONIALS_DATA = [
   {
     id: "1",
     text: "I worked with the Ace Mansion Team on a corporate project and was blown away by the results. Their team was professional, creative, and easy to work with. The final product exceeded our expectations and helped us achieved our marketing goals.",
-    image: services4,
+    image: techglobal,
     name: "Akin Oduwole",
-    job: "Managing Director",
+    job: "CEO Technology Global",
   },
   {
     id: "2",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
-    image: services,
-    name: "Veekie Royice",
+    image: vr,
+    name: "Veeki Royce",
     job: "Music Artist",
   },
   {
     id: "3",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
-    image: services3,
+    image: mikeBabaEse,
     name: "Mike Abdul",
     job: "Music Artist",
   },
   {
     id: "4",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
-    image: services2,
+    image: ayo,
     name: "Israel Ayodeji",
     job: "CEO Web3Bridge",
   },
   {
     id: "5",
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
-    image: services3,
-    name: "Veekie Royice",
+    image: services,
+    name: "Veeki Royce",
+    job: "Music Artist",
+  },
+  {
+    id: "6",
+    text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
+    image: services,
+    name: "Veeki Royce",
     job: "Music Artist",
   },
 ];
@@ -98,7 +109,7 @@ export const TEAMS_DATA = [
     text: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente adipisci, veritatis amet libero similique aliquid totam reiciendis impedit assumenda in necessitatibus odio sint voluptatem, et dolorum ex iure eum sit?",
     image: bayo,
     name: "Adebayo Kasali",
-    job: "DOP",
+    job: "Lighting Specialists",
   },
 ];
 

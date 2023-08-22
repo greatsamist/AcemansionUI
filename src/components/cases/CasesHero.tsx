@@ -1,4 +1,4 @@
-import aboutImage from "../../assets/images/home/services-3.jpg";
+import aboutImage from "../../assets/images/cases/hero.jpg";
 import { CardHeroTitle } from "../utils/Card";
 
 const CasesHero = () => {

@@ -15,6 +15,10 @@ export const SERVICES_OPTIONS = [
     title: "Live-Streaming",
     value: "4",
   },
+  {
+    title: "Others",
+    value: "5",
+  },
 ];
 
 export const defaultContactForm = {

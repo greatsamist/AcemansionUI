@@ -32,7 +32,7 @@ const Hero = () => {
       </div>
 
       <Link
-        to="contact"
+        to="cases"
         className="border-b-2 border-ace-black p-4 pr-10 flex items-center justify-end gap-1"
       >
         <h5 className="text-right text-[22px]">Get Started</h5>

@@ -14,10 +14,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import CasesContactUs from "./CasesContactUs";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const Cases = () => {
   const [activeCase, setActiveCase] = useState(0);
   const swiperRef = useRef<SwiperCore>();
+  const { isLargeScreen } = useMediaQuery();
 
   const handleCaseClick = (index: number) => {
     setActiveCase(index);
@@ -130,11 +132,11 @@ const Cases = () => {
         </div>
       </div>
 
-      <div className="relative mt-24 h-[600px]">
+      <div className="relative mt-24 h-[600px] 2xl:h-[800px]">
         <ReactPlayer
           url={CASES_DATA[activeCase]?.video}
           width="100%"
-          height="600px"
+          height={isLargeScreen ? "800px" : "600px"}
           controls
         />
       </div>
