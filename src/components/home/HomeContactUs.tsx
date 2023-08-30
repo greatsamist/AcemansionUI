@@ -4,7 +4,7 @@ import ContactForm from "../form/ContactForm";
 
 const HomeContactUs = () => {
   return (
-    <div className="container mx-auto px-4 pb-28">
+    <div className="container mx-auto px-4 pb-28" id="home-contact">
       <SectionHeader title="Contact Us Today To learn how we can help bring your vision to life" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">

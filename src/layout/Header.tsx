@@ -40,20 +40,32 @@ const Header = () => {
         </div>
 
         <div>
-          <Link
-            to="contact"
-            className={cn(
-              "font-display text-[17px] lg:flex hidden items-center gap-1 uppercase",
-              currentLocation == "/contact" ? "text-ace-gold" : "text-white"
-            )}
-          >
-            Contact Us
-            <ArrowDownRight
-              color={
-                currentLocation == "/contact" ? COLORS.aceGold : COLORS.white
-              }
-            />
-          </Link>
+          {currentLocation == "/" ? (
+            <a
+              href="#home-contact"
+              className={cn(
+                "font-display text-[17px] lg:flex hidden items-center gap-1 uppercase text-white"
+              )}
+            >
+              Contact Us
+              <ArrowDownRight color={COLORS.white} />
+            </a>
+          ) : (
+            <Link
+              to={currentLocation == "/" ? "#home-contact" : "contact"}
+              className={cn(
+                "font-display text-[17px] lg:flex hidden items-center gap-1 uppercase",
+                currentLocation == "/contact" ? "text-ace-gold" : "text-white"
+              )}
+            >
+              Contact Us
+              <ArrowDownRight
+                color={
+                  currentLocation == "/contact" ? COLORS.aceGold : COLORS.white
+                }
+              />
+            </Link>
+          )}
         </div>
 
         {/* Mobile Navigation */}
