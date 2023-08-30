@@ -81,7 +81,7 @@ const OurTeam = () => {
 
       <div className="container mx-auto px-4 mb-28">
         <div className="border-2 border-ace-black p-10 mt-10 text-center">
-          <h4 className="text-2xl">{`${TEAMS_DATA[activeMember].name}., ${TEAMS_DATA[activeMember].job}`}</h4>
+          <h4 className="text-2xl">{`${TEAMS_DATA[activeMember].name}, ${TEAMS_DATA[activeMember].job}`}</h4>
           <p className="w-10/12 lg:w-8/12 mx-auto mt-3 text-lg">
             {TEAMS_DATA[activeMember].text}
           </p>

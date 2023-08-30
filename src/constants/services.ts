@@ -1,4 +1,9 @@
-import services from "../assets/images/home/hero-1.jpg";
+import music from "../assets/images/cases/hero.jpg";
+import wedding from "../assets/images/services/wedding.jpg";
+import promotional from "../assets/images/services/promotional.jpg";
+import live from "../assets/images/services/live.jpg";
+import services3 from "../assets/images/home/services-3.jpg";
+import services2 from "../assets/images/home/services-2.jpg";
 
 export const ServicesData = [
   {
@@ -6,14 +11,14 @@ export const ServicesData = [
     title: "Corporate Videos",
     description:
       "Elevate your brand and convey your message effectively with our tailored corporate videos. From company profiles and product demos to training videos and client testimonials, we'll help you present your business in the best possible light.",
-    image: services,
+    image: services3,
   },
   {
     id: "2",
     title: "Music Videos",
     description:
       "Visualize the rhythm of your music through our stunning music video production. Our team collaborates closely with artists to bring their vision to life, creating captivating visuals that enhance the overall music experience.",
-    image: services,
+    image: music,
     bg: "gold",
   },
   {
@@ -21,7 +26,7 @@ export const ServicesData = [
     title: "Event Coverage",
     description:
       "Don't miss a moment of your special event! Our skilled videographers capture every significant detail, from conferences and trade shows to festivals and private gatherings. Relive the excitement and share the memories with our event coverage.",
-    image: services,
+    image: services2,
     bg: "black",
   },
   {
@@ -29,21 +34,21 @@ export const ServicesData = [
     title: "Live Streaming",
     description:
       "Reach a global audience in real-time with our professional live streaming services. Whether it's a product launch, a live performance, or a webinar, we ensure seamless streaming, high-quality visuals, and interactive engagement.",
-    image: services,
+    image: live,
   },
   {
     id: "5",
     title: "Promotional Videos",
     description:
       "Grab your audience's attention and drive results with our dynamic promotional videos. Whether you're launching a new product, running a marketing campaign, or expanding your online presence, we craft videos that convert.",
-    image: services,
+    image: promotional,
   },
   {
     id: "6",
     title: "Wedding Videos",
     description:
       "Your love story deserves to be captured in a beautiful and cinematic way. Our wedding videos not only document your special day but also encapsulate the emotions, joy, and love that make it truly unique.",
-    image: services,
+    image: wedding,
     bg: "gold",
   },
 ];

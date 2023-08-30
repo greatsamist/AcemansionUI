@@ -25,31 +25,38 @@ const HomeCases = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-3 lg:gap-3 mt-10 ">
             <div
-              className="col-span-3 border-2 border-bg-white bg-cover bg-center bg-no-repeat overflow-hidden h-auto"
+              className="col-span-3 border-2 border-bg-white bg-cover bg-center bg-no-repeat overflow-hidden h-[350px] lg:h-auto"
               style={{ backgroundImage: `url(${casesImage})` }}
             >
               <ReactPlayer
                 url="https://www.youtube.com/watch?v=w27q1JukvJY"
                 width="100%"
+                height="100%"
                 controls
               />
             </div>
 
             <div className="col-span-2 bg-white text-ace-black p-8 flex flex-col gap-3">
               <Reveal>
-                <h5 className="text-2xl">Music Videos for Veekie Royce</h5>
+                <h5 className="text-2xl">Music Videos for Veeki Royce</h5>
               </Reveal>
               <Reveal>
                 <p>
-                  Wanted to enhance their brand image and effectively
-                  communicate their product offerings to their target audience
+                  Wanted to visually depict a strong and unwavering commitment,
+                  both spiritually and emotionally. The goal was to capture the
+                  essence of a devoted individual's journey with a higher power,
+                  emphasizing the idea of a lasting and unbreakable bond. The
+                  video aimed to convey a sense of loyalty, determination, and
+                  willingness to go the distance in this profound connection.
                 </p>
               </Reveal>
               <Reveal>
                 <p>
-                  The professionally produced video effectively the client's
-                  brand message, enhanced their market presence, and contributed
-                  to their overall business success.
+                  The project yielded a visually engaging music video that
+                  effectively conveyed the themes of dedication, loyalty, and
+                  spiritual devotion present in the lyrics. Through a
+                  combination of visual storytelling and emotive aesthetics, the
+                  video successfully brought the song's sentiments to life.
                 </p>
               </Reveal>
             </div>

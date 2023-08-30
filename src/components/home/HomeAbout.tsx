@@ -32,7 +32,7 @@ const HomeAbout = () => {
         <div></div>
         <div className="col-span-1 lg:col-span-4 row-span-2 lg:row-span-8 border-2 p-6 border-ace-black">
           <Reveal>
-            <h5>4 Years</h5>
+            <h5>3 Years</h5>
           </Reveal>
           <Reveal>
             <p className="mt-2 text-sm">
@@ -48,7 +48,7 @@ const HomeAbout = () => {
         <div className="col-span-1 lg:col-span-4 border-2 p-8 border-ace-black">
           <Reveal>
             <h5>
-              {`>`}485 <span className="block">Projects</span>
+              {`>`}285 <span className="block">Projects</span>
             </h5>
           </Reveal>
           <Reveal>

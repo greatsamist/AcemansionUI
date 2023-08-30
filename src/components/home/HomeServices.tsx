@@ -2,6 +2,7 @@ import SectionHeader from "../utils/SectionHeader";
 import { ArrowDownRight } from "lucide-react";
 import { Reveal } from "../utils/Reveal";
 import { SERVICES_DATA } from "../../constants";
+import { Link } from "react-router-dom";
 
 const HomeServices = () => {
   return (
@@ -36,10 +37,13 @@ const HomeServicesItem = ({ id, title, image }: HomeServicesItemProps) => {
           alt={title}
         />
       </div>
-      <div className="flex items-center justify-center py-4 gap-1">
+      <Link
+        to="services"
+        className="flex items-center justify-center py-4 gap-1"
+      >
         <h4 className="text-2xl">{title}</h4>
         <ArrowDownRight size={30} />
-      </div>
+      </Link>
     </Reveal>
   );
 };

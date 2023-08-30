@@ -56,7 +56,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3 items-center md:items-start">
             <Link
               className="flex items-center gap-1"
-              to="https://www.instagram.com/acemansion/"
+              to="https://wa.me/2348166595811"
               target="_blank"
               rel="noopener noreferrer"
             >
